@@ -45,10 +45,14 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutSBRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gitHubProjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contributorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button13 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.githubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contributeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contributorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.learnHowToContributeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.releasesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportAnIssueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -194,6 +198,7 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.githubToolStripMenuItem,
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -204,8 +209,7 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutSBRToolStripMenuItem,
-            this.gitHubProjectToolStripMenuItem});
+            this.aboutSBRToolStripMenuItem});
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.aboutToolStripMenuItem.Text = "About";
@@ -216,20 +220,6 @@
             this.aboutSBRToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.aboutSBRToolStripMenuItem.Text = "About SBR";
             this.aboutSBRToolStripMenuItem.Click += new System.EventHandler(this.aboutSBRToolStripMenuItem_Click);
-            // 
-            // gitHubProjectToolStripMenuItem
-            // 
-            this.gitHubProjectToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.contributorsToolStripMenuItem});
-            this.gitHubProjectToolStripMenuItem.Name = "gitHubProjectToolStripMenuItem";
-            this.gitHubProjectToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.gitHubProjectToolStripMenuItem.Text = "GitHub Project";
-            // 
-            // contributorsToolStripMenuItem
-            // 
-            this.contributorsToolStripMenuItem.Name = "contributorsToolStripMenuItem";
-            this.contributorsToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
-            this.contributorsToolStripMenuItem.Text = "Contributors";
             // 
             // button13
             // 
@@ -249,6 +239,53 @@
             this.label5.Size = new System.Drawing.Size(392, 13);
             this.label5.TabIndex = 18;
             this.label5.Text = "Click on the corresponding box whenever the technician opens or says something";
+            // 
+            // githubToolStripMenuItem
+            // 
+            this.githubToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.contributeToolStripMenuItem,
+            this.releasesToolStripMenuItem,
+            this.reportAnIssueToolStripMenuItem});
+            this.githubToolStripMenuItem.Name = "githubToolStripMenuItem";
+            this.githubToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.githubToolStripMenuItem.Text = "Github";
+            // 
+            // contributeToolStripMenuItem
+            // 
+            this.contributeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.contributorsToolStripMenuItem,
+            this.learnHowToContributeToolStripMenuItem});
+            this.contributeToolStripMenuItem.Name = "contributeToolStripMenuItem";
+            this.contributeToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.contributeToolStripMenuItem.Text = "Contribute";
+            // 
+            // contributorsToolStripMenuItem
+            // 
+            this.contributorsToolStripMenuItem.Name = "contributorsToolStripMenuItem";
+            this.contributorsToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
+            this.contributorsToolStripMenuItem.Text = "Contributors";
+            this.contributorsToolStripMenuItem.Click += new System.EventHandler(this.contributorsToolStripMenuItem_Click);
+            // 
+            // learnHowToContributeToolStripMenuItem
+            // 
+            this.learnHowToContributeToolStripMenuItem.Name = "learnHowToContributeToolStripMenuItem";
+            this.learnHowToContributeToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
+            this.learnHowToContributeToolStripMenuItem.Text = "Learn how to contribute";
+            this.learnHowToContributeToolStripMenuItem.Click += new System.EventHandler(this.learnHowToContributeToolStripMenuItem_Click);
+            // 
+            // releasesToolStripMenuItem
+            // 
+            this.releasesToolStripMenuItem.Name = "releasesToolStripMenuItem";
+            this.releasesToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.releasesToolStripMenuItem.Text = "Releases";
+            this.releasesToolStripMenuItem.Click += new System.EventHandler(this.releasesToolStripMenuItem_Click);
+            // 
+            // reportAnIssueToolStripMenuItem
+            // 
+            this.reportAnIssueToolStripMenuItem.Name = "reportAnIssueToolStripMenuItem";
+            this.reportAnIssueToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.reportAnIssueToolStripMenuItem.Text = "Report an issue";
+            this.reportAnIssueToolStripMenuItem.Click += new System.EventHandler(this.reportAnIssueToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -274,6 +311,8 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(498, 372);
+            this.MinimumSize = new System.Drawing.Size(498, 372);
             this.Name = "Form1";
             this.ShowIcon = false;
             this.Text = "Scammer Bingo Reborn (Community)";
@@ -303,11 +342,15 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutSBRToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem gitHubProjectToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem contributorsToolStripMenuItem;
         public System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ToolStripMenuItem githubToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem contributeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem contributorsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem learnHowToContributeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem releasesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportAnIssueToolStripMenuItem;
     }
 }
 
