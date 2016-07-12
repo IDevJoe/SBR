@@ -43,16 +43,17 @@
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutSBRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button13 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.githubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contributeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contributorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.learnHowToContributeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.releasesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportAnIssueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutSBRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button13 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.contactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -206,40 +207,6 @@
             this.menuStrip1.TabIndex = 16;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutSBRToolStripMenuItem});
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
-            this.aboutToolStripMenuItem.Text = "About";
-            // 
-            // aboutSBRToolStripMenuItem
-            // 
-            this.aboutSBRToolStripMenuItem.Name = "aboutSBRToolStripMenuItem";
-            this.aboutSBRToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.aboutSBRToolStripMenuItem.Text = "About SBR";
-            this.aboutSBRToolStripMenuItem.Click += new System.EventHandler(this.aboutSBRToolStripMenuItem_Click);
-            // 
-            // button13
-            // 
-            this.button13.Location = new System.Drawing.Point(395, 27);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(75, 23);
-            this.button13.TabIndex = 17;
-            this.button13.Text = "Reset";
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(42, 310);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(392, 13);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "Click on the corresponding box whenever the technician opens or says something";
-            // 
             // githubToolStripMenuItem
             // 
             this.githubToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -286,6 +253,48 @@
             this.reportAnIssueToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.reportAnIssueToolStripMenuItem.Text = "Report an issue";
             this.reportAnIssueToolStripMenuItem.Click += new System.EventHandler(this.reportAnIssueToolStripMenuItem_Click);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutSBRToolStripMenuItem,
+            this.contactToolStripMenuItem});
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.aboutToolStripMenuItem.Text = "About";
+            // 
+            // aboutSBRToolStripMenuItem
+            // 
+            this.aboutSBRToolStripMenuItem.Name = "aboutSBRToolStripMenuItem";
+            this.aboutSBRToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutSBRToolStripMenuItem.Text = "About SBR";
+            this.aboutSBRToolStripMenuItem.Click += new System.EventHandler(this.aboutSBRToolStripMenuItem_Click);
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(395, 27);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(75, 23);
+            this.button13.TabIndex = 17;
+            this.button13.Text = "Reset";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(42, 310);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(392, 13);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Click on the corresponding box whenever the technician opens or says something";
+            // 
+            // contactToolStripMenuItem
+            // 
+            this.contactToolStripMenuItem.Name = "contactToolStripMenuItem";
+            this.contactToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.contactToolStripMenuItem.Text = "Contact";
+            this.contactToolStripMenuItem.Click += new System.EventHandler(this.contactToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -351,6 +360,7 @@
         private System.Windows.Forms.ToolStripMenuItem learnHowToContributeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem releasesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportAnIssueToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem contactToolStripMenuItem;
     }
 }
 

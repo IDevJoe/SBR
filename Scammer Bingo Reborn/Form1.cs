@@ -138,5 +138,10 @@ namespace Scammer_Bingo_Reborn
         {
             System.Diagnostics.Process.Start("https://github.com/JoeTheHuman/Scammer-Bingo-Reborn/issues/new");
         }
+
+        private void contactToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/JoeTheHuman/Scammer-Bingo-Reborn/wiki/Support");
+        }
     }
 }
