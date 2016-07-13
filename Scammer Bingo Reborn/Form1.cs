@@ -12,7 +12,7 @@ namespace Scammer_Bingo_Reborn
 {
     public partial class Form1 : Form
     {
-
+        //Joe is awesome :D
         private static int score = 0;
 
         public Form1()
@@ -85,6 +85,38 @@ namespace Scammer_Bingo_Reborn
         {
             buttonClick(sender);
         }
+        private void button14_Click(object sender, EventArgs e)
+        {
+            buttonClick(sender);
+        }
+        private void button15_Click(object sender, EventArgs e)
+        {
+            buttonClick(sender);
+        }
+        private void button16_Click(object sender, EventArgs e)
+        {
+            buttonClick(sender);
+        }
+        private void button17_Click(object sender, EventArgs e)
+        {
+            buttonClick(sender);
+        }
+        private void button18_Click(object sender, EventArgs e)
+        {
+            buttonClick(sender);
+        }
+        private void button19_Click(object sender, EventArgs e)
+        {
+            buttonClick(sender);
+        }
+        private void button20_Click(object sender, EventArgs e)
+        {
+            buttonClick(sender);
+        }
+        private void button21_Click(object sender, EventArgs e)
+        {
+            buttonClick(sender);
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -94,7 +126,7 @@ namespace Scammer_Bingo_Reborn
         private void buttonClick(object sender)
         {
             score++;
-            string newScore = score + "/12";
+            string newScore = score + "/20";
             label3.Text = newScore;
             ((Button)sender).Enabled = false;
             button13.Focus();
@@ -114,8 +146,17 @@ namespace Scammer_Bingo_Reborn
             button10.Enabled = true;
             button11.Enabled = true;
             button12.Enabled = true;
+            button14.Enabled = true;
+            button15.Enabled = true;
+            button16.Enabled = true;
+            button17.Enabled = true;
+            button18.Enabled = true;
+            button19.Enabled = true;
+            button20.Enabled = true;
+            button21.Enabled = true;
+
             score = 0;
-            label3.Text = "0/12";
+            label3.Text = "0/20";
             button13.Focus();
         }
 
@@ -147,6 +188,11 @@ namespace Scammer_Bingo_Reborn
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/JoeTheHuman/Scammer-Bingo-Reborn/wiki/How-to-contribute");
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://www.fakeaddressgenerator.com/World/us_address_generator");
         }
     }
 }
