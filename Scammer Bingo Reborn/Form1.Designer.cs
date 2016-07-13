@@ -55,18 +55,18 @@
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button21 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.menuStrip1.SuspendLayout();
@@ -215,7 +215,7 @@
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(776, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(793, 24);
             this.menuStrip1.TabIndex = 16;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -311,7 +311,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(601, 35);
+            this.groupBox1.Location = new System.Drawing.Point(615, 35);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(163, 64);
             this.groupBox1.TabIndex = 19;
@@ -342,15 +342,95 @@
             this.groupBox2.Controls.Add(this.button7);
             this.groupBox2.Location = new System.Drawing.Point(12, 35);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(583, 366);
+            this.groupBox2.Size = new System.Drawing.Size(597, 366);
             this.groupBox2.TabIndex = 20;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Bingo Board";
             // 
+            // button21
+            // 
+            this.button21.Location = new System.Drawing.Point(474, 278);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(109, 80);
+            this.button21.TabIndex = 22;
+            this.button21.Text = "$$$";
+            this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
+            // 
+            // button20
+            // 
+            this.button20.Location = new System.Drawing.Point(359, 278);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(109, 80);
+            this.button20.TabIndex = 21;
+            this.button20.Text = "Trying to stick to the script";
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
+            // 
+            // button19
+            // 
+            this.button19.Location = new System.Drawing.Point(244, 278);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(109, 80);
+            this.button19.TabIndex = 20;
+            this.button19.Text = "Corrupted Drivers";
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
+            // 
+            // button18
+            // 
+            this.button18.Location = new System.Drawing.Point(129, 278);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(109, 80);
+            this.button18.TabIndex = 19;
+            this.button18.Text = "The scammer knows...";
+            this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
+            // 
+            // button17
+            // 
+            this.button17.Location = new System.Drawing.Point(14, 278);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(109, 80);
+            this.button17.TabIndex = 18;
+            this.button17.Text = "I cant understand you, sir";
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
+            // button16
+            // 
+            this.button16.Location = new System.Drawing.Point(474, 192);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(109, 80);
+            this.button16.TabIndex = 17;
+            this.button16.Text = "support.me";
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
+            // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(474, 106);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(109, 80);
+            this.button15.TabIndex = 16;
+            this.button15.Text = "hh h";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(474, 20);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(109, 80);
+            this.button14.TabIndex = 15;
+            this.button14.Text = "Fuck off";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.button13);
-            this.groupBox3.Location = new System.Drawing.Point(602, 105);
+            this.groupBox3.Location = new System.Drawing.Point(616, 105);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(162, 59);
             this.groupBox3.TabIndex = 21;
@@ -360,7 +440,7 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.label5);
-            this.groupBox4.Location = new System.Drawing.Point(602, 170);
+            this.groupBox4.Location = new System.Drawing.Point(616, 170);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(162, 100);
             this.groupBox4.TabIndex = 22;
@@ -370,7 +450,7 @@
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.linkLabel1);
-            this.groupBox5.Location = new System.Drawing.Point(601, 271);
+            this.groupBox5.Location = new System.Drawing.Point(615, 276);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(163, 50);
             this.groupBox5.TabIndex = 23;
@@ -388,83 +468,10 @@
             this.linkLabel1.Text = "Click here to contribute";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // button14
-            // 
-            this.button14.Location = new System.Drawing.Point(475, 20);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(109, 80);
-            this.button14.TabIndex = 15;
-            this.button14.Text = "Fuck off";
-            this.button14.UseVisualStyleBackColor = true;
-            // 
-            // button15
-            // 
-            this.button15.Location = new System.Drawing.Point(474, 106);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(109, 80);
-            this.button15.TabIndex = 16;
-            this.button15.Text = "hh h";
-            this.button15.UseVisualStyleBackColor = true;
-            // 
-            // button16
-            // 
-            this.button16.Location = new System.Drawing.Point(474, 192);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(109, 80);
-            this.button16.TabIndex = 17;
-            this.button16.Text = "support.me";
-            this.button16.UseVisualStyleBackColor = true;
-            // 
-            // button17
-            // 
-            this.button17.Location = new System.Drawing.Point(14, 278);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(109, 80);
-            this.button17.TabIndex = 18;
-            this.button17.Text = "I cant understand you, sir";
-            this.button17.UseVisualStyleBackColor = true;
-            // 
-            // button18
-            // 
-            this.button18.Location = new System.Drawing.Point(129, 278);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(109, 80);
-            this.button18.TabIndex = 19;
-            this.button18.Text = "The scammer knows...";
-            this.button18.UseVisualStyleBackColor = true;
-            // 
-            // button19
-            // 
-            this.button19.Location = new System.Drawing.Point(244, 278);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(109, 80);
-            this.button19.TabIndex = 20;
-            this.button19.Text = "Corrupted Drivers";
-            this.button19.UseVisualStyleBackColor = true;
-            // 
-            // button20
-            // 
-            this.button20.Location = new System.Drawing.Point(359, 278);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(109, 80);
-            this.button20.TabIndex = 21;
-            this.button20.Text = "Trying to stick to the script";
-            this.button20.UseVisualStyleBackColor = true;
-            // 
-            // button21
-            // 
-            this.button21.Location = new System.Drawing.Point(474, 278);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(109, 80);
-            this.button21.TabIndex = 22;
-            this.button21.Text = "$$$";
-            this.button21.UseVisualStyleBackColor = true;
-            this.button21.Click += new System.EventHandler(this.button21_Click);
-            // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.linkLabel2);
-            this.groupBox6.Location = new System.Drawing.Point(607, 327);
+            this.groupBox6.Location = new System.Drawing.Point(616, 335);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(163, 66);
             this.groupBox6.TabIndex = 24;
@@ -486,7 +493,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(776, 433);
+            this.ClientSize = new System.Drawing.Size(793, 412);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox1);
@@ -496,8 +503,8 @@
             this.Controls.Add(this.groupBox4);
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(792, 472);
-            this.MinimumSize = new System.Drawing.Size(792, 472);
+            this.MaximumSize = new System.Drawing.Size(809, 451);
+            this.MinimumSize = new System.Drawing.Size(809, 451);
             this.Name = "Form1";
             this.ShowIcon = false;
             this.Text = "Scammer Bingo Reborn (Community)";
