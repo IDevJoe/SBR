@@ -174,5 +174,6 @@ namespace Scammer_Bingo_Reborn
                 checkBox2.Enabled = false;
             }
         }
+
     }
 }
