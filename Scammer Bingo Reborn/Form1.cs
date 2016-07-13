@@ -12,22 +12,28 @@ namespace Scammer_Bingo_Reborn
 {
     public partial class Form1 : Form
     {
-        //Joe is awesome :D
+        //Global Variables
         private static int score = 0;
+        Button[,] btns;
 
-        //
+        //// "SETTINGS"
+
+        //Button text
         private string[,] buttonText = 
             {
-                { "these","are","just" },
-                { "as1","a23123s","a345s" },
-                { "these","are354345","just" },
-                { "5345as","a354s","as" }
+                { "Run","netstat","Stopped Services", "I can't understand you sir" },
+                { "eventvwr","Secure Server","msconfig","The scammer knows..." },
+                { "cmd","Do One Thing","Microsoft Certified", "Corrupted Drivers" },
+                { "tree","Network Security","syskey","Trying to stick to the script" },
+                { "Fuck off", "hh h", "support.me", "$$$" }
             };
 
         //Percentage of white space between buttons
         private float whitespaceX = 0.1f, whitespaceY = 0.1f;
+
         //Offset from the top of the GroupBox (needed or the first button will go on top of the GroupBox's text)
         private int offsetY = 10;
+        ////
 
         public Form1()
         {
@@ -42,22 +48,38 @@ namespace Scammer_Bingo_Reborn
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            PrepareButtons();
+
+            label3.Text = "0/" + btns.Length;
+
             buttonReset.Focus();
+            PrepareButtons();
 
-            Button[,] btns = new Button[buttonText.GetLength(0),buttonText.GetLength(1)];
+            ResetScoreAndButtons();
 
+        }
+
+        private void BingoButton_Click(object sender, EventArgs e)
+        {
+            buttonClick(sender);
+        }
+
+        //Initialize and set button names 
+        private void PrepareButtons()
+        {
+            btns = new Button[buttonText.GetLength(0), buttonText.GetLength(1)];
 
             for (int i = 0; i < buttonText.GetLength(0); i++)
             {
                 for (int j = 0; j < buttonText.GetLength(1); j++)
                 {
-                    btns[i,j] = new Button();
-                    btns[i,j].Name = "btn" + i + "." + j;
-                    btns[i,j].Text = buttonText[i,j];
+                    btns[i, j] = new Button();
+                    btns[i, j].Name = "btn" + i + "." + j;
+                    btns[i, j].Text = buttonText[i, j];
+                    btns[i, j].Click += BingoButton_Click;
                 }
             }
             ArrangeButtons(btns, groupBox_BingoBoard);
-
         }
 
         private void ArrangeButtons(Button[,] btns, GroupBox container)
@@ -86,7 +108,7 @@ namespace Scammer_Bingo_Reborn
         private void buttonClick(object sender)
         {
             score++;
-            string newScore = score + "/20";
+            string newScore = score + "/" + btns.Length;
             label3.Text = newScore;
             ((Button)sender).Enabled = false;
             buttonReset.Focus();
@@ -98,40 +120,24 @@ namespace Scammer_Bingo_Reborn
                 MessageBox.Show(Settings.twmessage + "\n\n(You can disable these messages in SBR -> Settings)", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if(Settings.autoreset)
                 {
-                    button1.Enabled = true;
-                    button2.Enabled = true;
-                    button3.Enabled = true;
-                    button4.Enabled = true;
-                    button5.Enabled = true;
-                    button6.Enabled = true;
-                    button7.Enabled = true;
-                    button8.Enabled = true;
-                    button9.Enabled = true;
-                    button10.Enabled = true;
-                    button11.Enabled = true;
-                    button12.Enabled = true;
-                    button14.Enabled = true;
-                    button15.Enabled = true;
-                    button16.Enabled = true;
-                    button17.Enabled = true;
-                    button18.Enabled = true;
-                    button19.Enabled = true;
-                    button20.Enabled = true;
-                    button21.Enabled = true;
-
-                    score = 0;
-                    label3.Text = "0/20";
-                    buttonReset.Focus();
+                    ResetScoreAndButtons();
                 }
             }
         }
 
         private void buttonReset_Click(object sender, EventArgs e)
         {
+            ResetScoreAndButtons();
+        }
 
-
+        private void ResetScoreAndButtons()
+        {
             score = 0;
-            label3.Text = "0/20";
+            label3.Text = "0/" + btns.Length;
+            foreach (Button btn in btns)
+            {
+                btn.Enabled = true;
+            }
             buttonReset.Focus();
         }
 
