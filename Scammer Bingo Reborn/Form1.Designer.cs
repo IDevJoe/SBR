@@ -71,6 +71,9 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.partnersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xeliteXirishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.androidScammerBingoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -229,7 +232,8 @@
             this.menuStrip1.BackColor = System.Drawing.SystemColors.Control;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem,
-            this.githubToolStripMenuItem});
+            this.githubToolStripMenuItem,
+            this.partnersToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(793, 24);
@@ -550,6 +554,29 @@
             this.linkLabel2.VisitedLinkColor = System.Drawing.Color.Silver;
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
+            // partnersToolStripMenuItem
+            // 
+            this.partnersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.xeliteXirishToolStripMenuItem});
+            this.partnersToolStripMenuItem.Name = "partnersToolStripMenuItem";
+            this.partnersToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.partnersToolStripMenuItem.Text = "Partners";
+            // 
+            // xeliteXirishToolStripMenuItem
+            // 
+            this.xeliteXirishToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.androidScammerBingoToolStripMenuItem});
+            this.xeliteXirishToolStripMenuItem.Name = "xeliteXirishToolStripMenuItem";
+            this.xeliteXirishToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.xeliteXirishToolStripMenuItem.Text = "XeliteXirish";
+            // 
+            // androidScammerBingoToolStripMenuItem
+            // 
+            this.androidScammerBingoToolStripMenuItem.Name = "androidScammerBingoToolStripMenuItem";
+            this.androidScammerBingoToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.androidScammerBingoToolStripMenuItem.Text = "Android Scammer Bingo";
+            this.androidScammerBingoToolStripMenuItem.Click += new System.EventHandler(this.androidScammerBingoToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -630,6 +657,9 @@
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem partnersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem xeliteXirishToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem androidScammerBingoToolStripMenuItem;
     }
 }
 

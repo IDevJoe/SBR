@@ -233,5 +233,10 @@ namespace Scammer_Bingo_Reborn
         {
             new Settings().ShowDialog();
         }
+
+        private void androidScammerBingoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://play.google.com/store/apps/details?id=com.xelitexirish.scammerbingo");
+        }
     }
 }
