@@ -42,16 +42,17 @@
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.contactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutSBRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.githubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contributeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contributorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.learnHowToContributeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.releasesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportAnIssueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutSBRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button13 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -70,7 +71,6 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -226,7 +226,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.Control;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem,
             this.githubToolStripMenuItem});
@@ -236,13 +236,52 @@
             this.menuStrip1.TabIndex = 16;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.settingsToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.contactToolStripMenuItem,
+            this.aboutSBRToolStripMenuItem});
+            this.aboutToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
+            this.aboutToolStripMenuItem.Text = "SBR";
+            // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.settingsToolStripMenuItem.Text = "Settings";
+            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            // 
+            // contactToolStripMenuItem
+            // 
+            this.contactToolStripMenuItem.Name = "contactToolStripMenuItem";
+            this.contactToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.contactToolStripMenuItem.Text = "Contact";
+            this.contactToolStripMenuItem.Click += new System.EventHandler(this.contactToolStripMenuItem_Click);
+            // 
+            // aboutSBRToolStripMenuItem
+            // 
+            this.aboutSBRToolStripMenuItem.Name = "aboutSBRToolStripMenuItem";
+            this.aboutSBRToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutSBRToolStripMenuItem.Text = "About SBR";
+            this.aboutSBRToolStripMenuItem.Click += new System.EventHandler(this.aboutSBRToolStripMenuItem_Click);
+            // 
             // githubToolStripMenuItem
             // 
+            this.githubToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
             this.githubToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.contributeToolStripMenuItem,
             this.releasesToolStripMenuItem,
             this.reportAnIssueToolStripMenuItem});
-            this.githubToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.githubToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.githubToolStripMenuItem.Name = "githubToolStripMenuItem";
             this.githubToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.githubToolStripMenuItem.Text = "Github";
@@ -283,39 +322,6 @@
             this.reportAnIssueToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.reportAnIssueToolStripMenuItem.Text = "Report an issue";
             this.reportAnIssueToolStripMenuItem.Click += new System.EventHandler(this.reportAnIssueToolStripMenuItem_Click);
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.settingsToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.contactToolStripMenuItem,
-            this.aboutSBRToolStripMenuItem});
-            this.aboutToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
-            this.aboutToolStripMenuItem.Text = "SBR";
-            // 
-            // settingsToolStripMenuItem
-            // 
-            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.settingsToolStripMenuItem.Text = "Settings";
-            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
-            // 
-            // contactToolStripMenuItem
-            // 
-            this.contactToolStripMenuItem.Name = "contactToolStripMenuItem";
-            this.contactToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.contactToolStripMenuItem.Text = "Contact";
-            this.contactToolStripMenuItem.Click += new System.EventHandler(this.contactToolStripMenuItem_Click);
-            // 
-            // aboutSBRToolStripMenuItem
-            // 
-            this.aboutSBRToolStripMenuItem.Name = "aboutSBRToolStripMenuItem";
-            this.aboutSBRToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.aboutSBRToolStripMenuItem.Text = "About SBR";
-            this.aboutSBRToolStripMenuItem.Click += new System.EventHandler(this.aboutSBRToolStripMenuItem_Click);
             // 
             // button13
             // 
@@ -543,11 +549,6 @@
             this.linkLabel2.Text = "Helps you troll!";
             this.linkLabel2.VisitedLinkColor = System.Drawing.Color.Silver;
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
             // 
             // Form1
             // 
