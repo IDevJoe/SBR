@@ -14,6 +14,7 @@ namespace Scammer_Bingo_Reborn
         [STAThread]
         static void Main()
         {
+            Settings.ReadConfig();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
