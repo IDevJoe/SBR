@@ -30,6 +30,11 @@
         {
             this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.contactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutSBRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.githubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contributeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contributorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,7 +54,9 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.partnersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xeliteXirishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.androidScammerBingoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -60,31 +67,75 @@
             // 
             // label3
             // 
+            this.label3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 20);
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(43, 20);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 31);
+            this.label3.Size = new System.Drawing.Size(83, 31);
             this.label3.TabIndex = 2;
             this.label3.Text = "0/20";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.Control;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem,
             this.githubToolStripMenuItem,
-            this.aboutToolStripMenuItem});
+            this.partnersToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(793, 24);
             this.menuStrip1.TabIndex = 16;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.settingsToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.contactToolStripMenuItem,
+            this.aboutSBRToolStripMenuItem});
+            this.aboutToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
+            this.aboutToolStripMenuItem.Text = "SBR";
+            // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.settingsToolStripMenuItem.Text = "Settings";
+            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            // 
+            // contactToolStripMenuItem
+            // 
+            this.contactToolStripMenuItem.Name = "contactToolStripMenuItem";
+            this.contactToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.contactToolStripMenuItem.Text = "Contact";
+            this.contactToolStripMenuItem.Click += new System.EventHandler(this.contactToolStripMenuItem_Click);
+            // 
+            // aboutSBRToolStripMenuItem
+            // 
+            this.aboutSBRToolStripMenuItem.Name = "aboutSBRToolStripMenuItem";
+            this.aboutSBRToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutSBRToolStripMenuItem.Text = "About SBR";
+            this.aboutSBRToolStripMenuItem.Click += new System.EventHandler(this.aboutSBRToolStripMenuItem_Click);
+            // 
             // githubToolStripMenuItem
             // 
+            this.githubToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
             this.githubToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.contributeToolStripMenuItem,
             this.releasesToolStripMenuItem,
             this.reportAnIssueToolStripMenuItem});
+            this.githubToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.githubToolStripMenuItem.Name = "githubToolStripMenuItem";
             this.githubToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.githubToolStripMenuItem.Text = "Github";
@@ -160,11 +211,14 @@
             this.buttonReset.UseVisualStyleBackColor = true;
             this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
             // 
+            // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(2, 16);
+            this.label5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.Location = new System.Drawing.Point(2, 33);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(154, 81);
+            this.label5.Size = new System.Drawing.Size(154, 44);
             this.label5.TabIndex = 18;
             this.label5.Text = "Click on the corresponding box whenever the technician opens or says something";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -172,6 +226,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox1.Location = new System.Drawing.Point(615, 35);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(163, 64);
@@ -191,6 +246,21 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.buttonReset);
+            // groupBox_BingoBoard
+            // 
+            this.groupBox_BingoBoard.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.groupBox_BingoBoard.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox_BingoBoard.Location = new System.Drawing.Point(12, 35);
+            this.groupBox_BingoBoard.Name = "groupBox_BingoBoard";
+            this.groupBox_BingoBoard.Size = new System.Drawing.Size(597, 366);
+            this.groupBox_BingoBoard.TabIndex = 20;
+            this.groupBox_BingoBoard.TabStop = false;
+            this.groupBox_BingoBoard.Text = "Bingo Board";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.buttonReset);
+            this.groupBox3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox3.Location = new System.Drawing.Point(616, 105);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(162, 59);
@@ -201,6 +271,7 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.label5);
+            this.groupBox4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox4.Location = new System.Drawing.Point(616, 170);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(162, 100);
@@ -211,6 +282,7 @@
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.linkLabel1);
+            this.groupBox5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox5.Location = new System.Drawing.Point(615, 276);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(163, 50);
@@ -221,17 +293,23 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.linkLabel1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.linkLabel1.LinkColor = System.Drawing.Color.White;
             this.linkLabel1.Location = new System.Drawing.Point(26, 23);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(116, 13);
             this.linkLabel1.TabIndex = 0;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Click here to contribute";
+            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.Silver;
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // groupBox6
             // 
+            this.groupBox6.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.groupBox6.Controls.Add(this.linkLabel2);
+            this.groupBox6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox6.Location = new System.Drawing.Point(616, 335);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(163, 66);
@@ -242,25 +320,46 @@
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
+            this.linkLabel2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.linkLabel2.LinkColor = System.Drawing.Color.White;
             this.linkLabel2.Location = new System.Drawing.Point(36, 29);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(76, 13);
             this.linkLabel2.TabIndex = 0;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Helps you troll!";
+            this.linkLabel2.VisitedLinkColor = System.Drawing.Color.Silver;
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
-            // settingsToolStripMenuItem
+            // partnersToolStripMenuItem
             // 
-            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.settingsToolStripMenuItem.Text = "Settings";
-            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
+            this.partnersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.xeliteXirishToolStripMenuItem});
+            this.partnersToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.partnersToolStripMenuItem.Name = "partnersToolStripMenuItem";
+            this.partnersToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.partnersToolStripMenuItem.Text = "Partners";
+            // 
+            // xeliteXirishToolStripMenuItem
+            // 
+            this.xeliteXirishToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.androidScammerBingoToolStripMenuItem});
+            this.xeliteXirishToolStripMenuItem.Name = "xeliteXirishToolStripMenuItem";
+            this.xeliteXirishToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.xeliteXirishToolStripMenuItem.Text = "XeliteXirish";
+            // 
+            // androidScammerBingoToolStripMenuItem
+            // 
+            this.androidScammerBingoToolStripMenuItem.Name = "androidScammerBingoToolStripMenuItem";
+            this.androidScammerBingoToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.androidScammerBingoToolStripMenuItem.Text = "Android Scammer Bingo";
+            this.androidScammerBingoToolStripMenuItem.Click += new System.EventHandler(this.androidScammerBingoToolStripMenuItem_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(793, 412);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
@@ -314,6 +413,10 @@
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem partnersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem xeliteXirishToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem androidScammerBingoToolStripMenuItem;
     }
 }
 
