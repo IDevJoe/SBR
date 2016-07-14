@@ -13,7 +13,7 @@ namespace Scammer_Bingo_Reborn
 {
     public partial class Settings : Form
 
-    {
+    { 
 
         public static bool autoreset = false;
         public static bool messages = false;
