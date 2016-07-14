@@ -52,26 +52,43 @@ namespace Scammer_Bingo_Reborn
         public static void updateButtons()
         {
             Button[] btns = Form1.defaultForm.tochangenamesof.ToArray();
-            btns[0].Text = b1;
-            btns[1].Text = b2;
-            btns[2].Text = b3;
-            btns[3].Text = b4;
-            btns[4].Text = b5;
-            btns[5].Text = b6;
-            btns[6].Text = b7;
-            btns[7].Text = b8;
-            btns[8].Text = b9;
-            btns[9].Text = b10;
-            btns[10].Text = b11;
-            btns[11].Text = b12;
-            btns[12].Text = b13;
-            btns[13].Text = b14;
-            btns[14].Text = b15;
-            btns[15].Text = b16;
-            btns[16].Text = b17;
-            btns[17].Text = b18;
-            btns[18].Text = b19;
-            btns[19].Text = b20;
+
+            Form1.defaultForm.PrepareButtons(StringsToStringArray());
+        }
+
+        public static string[] LoadStringArray()
+        {
+            ReadConfig();
+            return StringsToStringArray();
+        }
+
+        private static string[] StringsToStringArray()
+        {
+            string[] stringsToPass = new string[20];
+
+
+            stringsToPass[0] = b1;
+            stringsToPass[1] = b2;
+            stringsToPass[2] = b3;
+            stringsToPass[3] = b4;
+            stringsToPass[4] = b5;
+            stringsToPass[5] = b6;
+            stringsToPass[6] = b7;
+            stringsToPass[7] = b8;
+            stringsToPass[8] = b9;
+            stringsToPass[9] = b10;
+            stringsToPass[10] = b11;
+            stringsToPass[11] = b12;
+            stringsToPass[12] = b13;
+            stringsToPass[13] = b14;
+            stringsToPass[14] = b15;
+            stringsToPass[15] = b16;
+            stringsToPass[16] = b17;
+            stringsToPass[17] = b18;
+            stringsToPass[18] = b19;
+            stringsToPass[19] = b20;
+
+            return stringsToPass;
         }
 
         private static bool isConfigParsable(String path)
@@ -137,7 +154,7 @@ namespace Scammer_Bingo_Reborn
 
         public static void ReadConfig()
         {
-            String path = "config.ini";
+            string path = "config.ini";
             if(!isConfigParsable(path))
             {
                 SaveConfig();
