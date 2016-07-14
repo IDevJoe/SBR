@@ -16,11 +16,6 @@ namespace Scammer_Bingo_Reborn
         public ListBox caller;
         public int actual = -1;
 
-        //public ButtonTextInput()
-        //{
-        //    InitializeComponent();
-        //}
-
         public ButtonTextInput(int _actual, ListBox _caller)
         {
             actual = _actual;
