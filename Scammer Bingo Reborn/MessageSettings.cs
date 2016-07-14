@@ -15,24 +15,24 @@ namespace Scammer_Bingo_Reborn
         public MessageSettings()
         {
             InitializeComponent();
-            textBox1.Text = Settings.temessage;
-            textBox2.Text = Settings.twmessage;
+            textBox1.Text = Settings.settings.temessage;
+            textBox2.Text = Settings.settings.twmessage;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Settings.temessage = textBox1.Text;
-            Settings.twmessage = textBox2.Text;
+            Settings.settings.temessage = textBox1.Text;
+            Settings.settings.twmessage = textBox2.Text;
             Settings.SaveConfig();
             this.Dispose();
         }
 
         private void MessageSettings_Load(object sender, EventArgs e)
         {
-            int color = Settings.global_background;
+            int color = Settings.settings.global_background;
             String back = Settings.colors[color];
             this.BackColor = ColorTranslator.FromHtml(back);
-            int color2 = Settings.global_foreground;
+            int color2 = Settings.settings.global_foreground;
             String fore = Settings.colors[color2];
             this.ForeColor = ColorTranslator.FromHtml(fore);
             Control[] arr = new Control[this.Controls.Count];

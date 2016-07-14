@@ -24,7 +24,6 @@ namespace Scammer_Bingo_Reborn
             {
                 "Run","netstat","Stopped Services", "I can't understand you sir","eventvwr","Secure Server","msconfig","The scammer knows...","cmd","Do One Thing","Microsoft Certified", "Corrupted Drivers","tree","Network Security","syskey","Trying to stick to the script","Fuck off", "hh h", "support.me", "$$$"
             };
-        public List<Button> tochangenamesof = new List<Button>();
 
         int sizeX = 5, sizeY = 4;
 
@@ -51,10 +50,10 @@ namespace Scammer_Bingo_Reborn
         {
             PrepareButtons(Settings.LoadStringArray());
             buttonReset.Focus();
-            int color = Settings.global_background;
+            int color = Settings.settings.global_background;
             String back = Settings.colors[color];
             this.BackColor = ColorTranslator.FromHtml(back);
-            int color2 = Settings.global_foreground;
+            int color2 = Settings.settings.global_foreground;
             String fore = Settings.colors[color2];
             this.ForeColor = ColorTranslator.FromHtml(fore);
             Control[] arr = new Control[this.Controls.Count];
@@ -130,7 +129,6 @@ namespace Scammer_Bingo_Reborn
                     btns[i, j].Name = "btn" + i + "." + j;
                     btns[i, j].Text = buttonText[i, j];
                     btns[i, j].Click += BingoButton_Click;
-                    tochangenamesof.Add(btns[i, j]);
                 }
             }
             ArrangeButtons(btns, container);
@@ -195,13 +193,13 @@ namespace Scammer_Bingo_Reborn
             label3.Text = newScore;
             ((Button)sender).Enabled = false;
             buttonReset.Focus();
-            if(score == btns.Length/2 && Settings.messages)
+            if(score == btns.Length/2 && Settings.settings.messages)
             {
-                MessageBox.Show(Settings.temessage + "\n\n(You can disable these messages in SBR -> Settings)", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            } else if(score == btns.Length && Settings.messages)
+                MessageBox.Show(Settings.settings.temessage + "\n\n(You can disable these messages in SBR -> Settings)", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            } else if(score == btns.Length && Settings.settings.messages)
             {
-                MessageBox.Show(Settings.twmessage + "\n\n(You can disable these messages in SBR -> Settings)", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if(Settings.autoreset)
+                MessageBox.Show(Settings.settings.twmessage + "\n\n(You can disable these messages in SBR -> Settings)", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if(Settings.settings.autoreset)
                 {
                     ResetScoreAndButtons();
                 }
@@ -213,7 +211,7 @@ namespace Scammer_Bingo_Reborn
             ResetScoreAndButtons();
         }
 
-        private void ResetScoreAndButtons()
+        public void ResetScoreAndButtons()
         {
             score = 0;
             label3.Text = "0/" + btns.Length;
