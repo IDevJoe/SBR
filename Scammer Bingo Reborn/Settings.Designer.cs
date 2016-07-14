@@ -256,6 +256,7 @@
             // button_Edit
             // 
             this.button_Edit.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button_Edit.Enabled = false;
             this.button_Edit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button_Edit.Location = new System.Drawing.Point(387, 255);
             this.button_Edit.Name = "button_Edit";
@@ -297,6 +298,7 @@
             this.listBoxStrings.Name = "listBoxStrings";
             this.listBoxStrings.Size = new System.Drawing.Size(452, 212);
             this.listBoxStrings.TabIndex = 1;
+            this.listBoxStrings.SelectedIndexChanged += new System.EventHandler(this.listBoxStrings_SelectedIndexChanged);
             // 
             // label4
             // 
