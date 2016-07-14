@@ -14,6 +14,7 @@ namespace Scammer_Bingo_Reborn
     {
         //Global Variables
         private static int score = 0;
+        public static Form1 defaultForm = null;
         Button[,] btns;
 
         //// "SETTINGS"
@@ -23,6 +24,7 @@ namespace Scammer_Bingo_Reborn
             {
                 "Run","netstat","Stopped Services", "I can't understand you sir","eventvwr","Secure Server","msconfig","The scammer knows...","cmd","Do One Thing","Microsoft Certified", "Corrupted Drivers","tree","Network Security","syskey","Trying to stick to the script","Fuck off", "hh h", "support.me", "$$$"
             };
+        public List<Button> tochangenamesof = new List<Button>();
 
         int sizeX = 5, sizeY = 4;
 
@@ -36,6 +38,7 @@ namespace Scammer_Bingo_Reborn
         public Form1()
         {
             InitializeComponent();
+            defaultForm = this;
         }
 
         private void aboutSBRToolStripMenuItem_Click(object sender, EventArgs e)
@@ -46,7 +49,7 @@ namespace Scammer_Bingo_Reborn
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            PrepareButtons(groupBox_BingoBoard);
+            PrepareButtons(Settings.LoadStringArray());
             buttonReset.Focus();
             int color = Settings.global_background;
             String back = Settings.colors[color];
@@ -86,7 +89,7 @@ namespace Scammer_Bingo_Reborn
             label3.Text = "0/" + btns.Length;
 
             buttonReset.Focus();
-            PrepareButtons(groupBox_BingoBoard);
+            PrepareButtons(Settings.LoadStringArray());
 
             ResetScoreAndButtons();
 
@@ -98,8 +101,10 @@ namespace Scammer_Bingo_Reborn
         }
 
         //Initialize and set button names 
-        private void PrepareButtons(GroupBox container)
+        public void PrepareButtons(string[] strings)
         {
+            GroupBox container = groupBox_BingoBoard;
+
             //Remove existing buttons before creating new ones
             if (btns!=null)
             {
@@ -113,7 +118,7 @@ namespace Scammer_Bingo_Reborn
                 }
             }
 
-            string[,] buttonText = SelectButtonNames(sizeX, sizeY);
+            string[,] buttonText = SelectButtonNames(sizeX, sizeY, strings);
 
             btns = new Button[buttonText.GetLength(0), buttonText.GetLength(1)];
 
@@ -125,12 +130,13 @@ namespace Scammer_Bingo_Reborn
                     btns[i, j].Name = "btn" + i + "." + j;
                     btns[i, j].Text = buttonText[i, j];
                     btns[i, j].Click += BingoButton_Click;
+                    tochangenamesof.Add(btns[i, j]);
                 }
             }
             ArrangeButtons(btns, container);
         }
 
-        private string[,] SelectButtonNames(int X, int Y)
+        private string[,] SelectButtonNames(int X, int Y, string[] buttonTextPool)
         {
             string[,] stringArray = new string[X, Y];
             bool[] stringAlreadyPicked = new bool[buttonTextPool.Length];
@@ -157,7 +163,6 @@ namespace Scammer_Bingo_Reborn
             }
 
             return stringArray;
-
         }
 
         private void ArrangeButtons(Button[,] btns, GroupBox container)
