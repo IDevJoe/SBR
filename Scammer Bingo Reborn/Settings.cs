@@ -216,6 +216,11 @@ namespace Scammer_Bingo_Reborn
         {
 
         }
+
+        private void listBoxStrings_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            button_Edit.Enabled = true;
+        }
     }
 
 
