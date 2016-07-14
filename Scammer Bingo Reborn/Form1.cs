@@ -14,6 +14,7 @@ namespace Scammer_Bingo_Reborn
     {
         //Global Variables
         private static int score = 0;
+        public static Form1 defaultForm = null;
         Button[,] btns;
 
         //// "SETTINGS"
@@ -27,6 +28,7 @@ namespace Scammer_Bingo_Reborn
                 { "tree","Network Security","syskey","Trying to stick to the script" },
                 { "Fuck off", "hh h", "support.me", "$$$" }
             };
+        public List<Button> tochangenamesof = new List<Button>();
 
         //Percentage of white space between buttons
         private float whitespaceX = 0.1f, whitespaceY = 0.1f;
@@ -38,6 +40,7 @@ namespace Scammer_Bingo_Reborn
         public Form1()
         {
             InitializeComponent();
+            defaultForm = this;
         }
 
         private void aboutSBRToolStripMenuItem_Click(object sender, EventArgs e)
@@ -112,8 +115,10 @@ namespace Scammer_Bingo_Reborn
                     btns[i, j].Name = "btn" + i + "." + j;
                     btns[i, j].Text = buttonText[i, j];
                     btns[i, j].Click += BingoButton_Click;
+                    tochangenamesof.Add(btns[i, j]);
                 }
             }
+            Settings.updateButtons();
             ArrangeButtons(btns, groupBox_BingoBoard);
         }
 
