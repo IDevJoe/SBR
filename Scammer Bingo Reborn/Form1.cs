@@ -19,14 +19,12 @@ namespace Scammer_Bingo_Reborn
         //// "SETTINGS"
 
         //Button text
-        private string[,] buttonText = 
+        private string[] buttonTextPool = 
             {
-                { "Run","netstat","Stopped Services", "I can't understand you sir" },
-                { "eventvwr","Secure Server","msconfig","The scammer knows..." },
-                { "cmd","Do One Thing","Microsoft Certified", "Corrupted Drivers" },
-                { "tree","Network Security","syskey","Trying to stick to the script" },
-                { "Fuck off", "hh h", "support.me", "$$$" }
+                "Run","netstat","Stopped Services", "I can't understand you sir","eventvwr","Secure Server","msconfig","The scammer knows...","cmd","Do One Thing","Microsoft Certified", "Corrupted Drivers","tree","Network Security","syskey","Trying to stick to the script","Fuck off", "hh h", "support.me", "$$$"
             };
+
+        int sizeX = 5, sizeY = 4;
 
         //Percentage of white space between buttons
         private float whitespaceX = 0.1f, whitespaceY = 0.1f;
@@ -48,7 +46,7 @@ namespace Scammer_Bingo_Reborn
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            PrepareButtons();
+            PrepareButtons(groupBox_BingoBoard);
             buttonReset.Focus();
             int color = Settings.global_background;
             String back = Settings.colors[color];
@@ -88,7 +86,7 @@ namespace Scammer_Bingo_Reborn
             label3.Text = "0/" + btns.Length;
 
             buttonReset.Focus();
-            PrepareButtons();
+            PrepareButtons(groupBox_BingoBoard);
 
             ResetScoreAndButtons();
 
@@ -100,8 +98,23 @@ namespace Scammer_Bingo_Reborn
         }
 
         //Initialize and set button names 
-        private void PrepareButtons()
+        private void PrepareButtons(GroupBox container)
         {
+            //Remove existing buttons before creating new ones
+            if (btns!=null)
+            {
+                foreach (Button btn in btns)
+                {
+                    if (container.Controls.Contains(btn))
+                    {
+                        container.Controls.Remove(btn);
+                        btn.Dispose();
+                    }
+                }
+            }
+
+            string[,] buttonText = SelectButtonNames(sizeX, sizeY);
+
             btns = new Button[buttonText.GetLength(0), buttonText.GetLength(1)];
 
             for (int i = 0; i < buttonText.GetLength(0); i++)
@@ -114,7 +127,37 @@ namespace Scammer_Bingo_Reborn
                     btns[i, j].Click += BingoButton_Click;
                 }
             }
-            ArrangeButtons(btns, groupBox_BingoBoard);
+            ArrangeButtons(btns, container);
+        }
+
+        private string[,] SelectButtonNames(int X, int Y)
+        {
+            string[,] stringArray = new string[X, Y];
+            bool[] stringAlreadyPicked = new bool[buttonTextPool.Length];
+            for (int i = 0; i < stringAlreadyPicked.Length; i++)
+            {
+                stringAlreadyPicked[i] = false;
+            }
+            Random RNG = new Random();
+
+            for (int i = 0; i < sizeX; i++)
+            {
+                for (int j = 0; j < sizeY; j++)
+                {
+                    int ti;
+                    do
+                    {
+                        ti = RNG.Next(0, buttonTextPool.Length);
+
+
+                    } while (stringAlreadyPicked[ti]);
+                    stringArray[i, j] = buttonTextPool[ti];
+                    stringAlreadyPicked[ti] = true;
+                }
+            }
+
+            return stringArray;
+
         }
 
         private void ArrangeButtons(Button[,] btns, GroupBox container)
@@ -147,12 +190,10 @@ namespace Scammer_Bingo_Reborn
             label3.Text = newScore;
             ((Button)sender).Enabled = false;
             buttonReset.Focus();
-            if(score == 10)
-            buttonReset.Focus();
-            if(score == 10 && Settings.messages)
+            if(score == btns.Length/2 && Settings.messages)
             {
                 MessageBox.Show(Settings.temessage + "\n\n(You can disable these messages in SBR -> Settings)", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            } else if(score == 20 && Settings.messages)
+            } else if(score == btns.Length && Settings.messages)
             {
                 MessageBox.Show(Settings.twmessage + "\n\n(You can disable these messages in SBR -> Settings)", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if(Settings.autoreset)
