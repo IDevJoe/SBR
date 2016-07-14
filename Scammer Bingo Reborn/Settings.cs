@@ -19,6 +19,10 @@ namespace Scammer_Bingo_Reborn
         public static bool messages = false;
         public static string twmessage = "You have successfully found a scammer!";
         public static string temessage = "Halfway there! You can probably rat out the scammer now.";
+        public static int global_background = 10;
+        public static int global_foreground = 9;
+
+        public static string[] colors = new string[] { "#006600", "#009900", "#00e600", "#003399", "#0033cc", "#0099ff", "#ff3399", "#ff3300", "#ff5c33", "#ffffff", "#737373", "#000000" };
 
         public Settings()
         {
@@ -34,6 +38,8 @@ namespace Scammer_Bingo_Reborn
                 bool me = false;
                 bool twm = false;
                 bool tem = false;
+                bool gb = false;
+                bool gf = false;
                 for(int i=0;i<lines.Length;i++)
                 {
                     if(lines[i].StartsWith("ar=") && (lines[i].ToLower() == "ar=false" || lines[i].ToLower() == "ar=true"))
@@ -52,8 +58,16 @@ namespace Scammer_Bingo_Reborn
                     {
                         tem = true;
                     }
+                    else if (lines[i].StartsWith("gb="))
+                    {
+                        gb = true;
+                    }
+                    else if (lines[i].StartsWith("gf="))
+                    {
+                        gf = true;
+                    }
                 }
-                if(ar && me && twm && tem)
+                if(ar && me && twm && tem && gb && gf)
                 {
                     return true;
                 }
@@ -68,7 +82,7 @@ namespace Scammer_Bingo_Reborn
             {
                 File.Delete(path);
             }
-            String[] config = new String[] { "ar=" + autoreset, "me=" + messages, "twm=" + twmessage, "tem=" + temessage };
+            String[] config = new String[] { "ar=" + autoreset, "me=" + messages, "twm=" + twmessage, "tem=" + temessage , "gb="+global_background, "gf="+global_foreground};
             File.WriteAllLines(path, config);
         }
 
@@ -110,6 +124,24 @@ namespace Scammer_Bingo_Reborn
                     {
                         string[] str = lines[i].Split('=');
                         temessage = str[1];
+                    }
+                    else if (lines[i].StartsWith("gb="))
+                    {
+                        string[] str = lines[i].Split('=');
+                        int.TryParse(str[1], out global_background);
+                        if(global_background < 0 || global_background > 11)
+                        {
+                            global_background = 10;
+                        }
+                    }
+                    else if (lines[i].StartsWith("gf="))
+                    {
+                        string[] str = lines[i].Split('=');
+                        int.TryParse(str[1], out global_foreground);
+                        if (global_foreground < 0 || global_foreground > 11)
+                        {
+                            global_foreground = 10;
+                        }
                     }
                 }
             }
@@ -173,7 +205,30 @@ namespace Scammer_Bingo_Reborn
             {
                 checkBox2.Enabled = false;
             }
+            comboBox1.SelectedIndex = global_background;
+            comboBox2.SelectedIndex = global_foreground;
+
+            int color = Settings.global_background;
+            String back = Settings.colors[color];
+            this.BackColor = ColorTranslator.FromHtml(back);
+            int color2 = Settings.global_foreground;
+            String fore = Settings.colors[color2];
+            this.ForeColor = ColorTranslator.FromHtml(fore);
+            Control[] arr = new Control[this.Controls.Count];
+            this.Controls.CopyTo(arr, 0);
+            Form1.paintControls(arr, fore, back);
         }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ComboBox b = (ComboBox)sender;
+            global_background = b.SelectedIndex;
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ComboBox b = (ComboBox)sender;
+            global_foreground = b.SelectedIndex;
+        }
     }
 }

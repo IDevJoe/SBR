@@ -558,6 +558,7 @@
             // 
             this.partnersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.xeliteXirishToolStripMenuItem});
+            this.partnersToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.partnersToolStripMenuItem.Name = "partnersToolStripMenuItem";
             this.partnersToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.partnersToolStripMenuItem.Text = "Partners";

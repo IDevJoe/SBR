@@ -29,6 +29,37 @@ namespace Scammer_Bingo_Reborn
         private void Form1_Load(object sender, EventArgs e)
         {
             button13.Focus();
+            int color = Settings.global_background;
+            String back = Settings.colors[color];
+            this.BackColor = ColorTranslator.FromHtml(back);
+            int color2 = Settings.global_foreground;
+            String fore = Settings.colors[color2];
+            this.ForeColor = ColorTranslator.FromHtml(fore);
+            Control[] arr = new Control[this.Controls.Count];
+            this.Controls.CopyTo(arr, 0);
+            paintControls(arr, fore, back);
+        }
+
+        public static void paintControls(Control[] arr, String fore, String back)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i].GetType().Name.ToLower() != "menustrip" && arr[i].GetType().Name.ToLower() != "toolstripmenuitem")
+                {
+                    if (arr[i].HasChildren)
+                    {
+                        arr[i].ForeColor = ColorTranslator.FromHtml(fore);
+                        arr[i].BackColor = ColorTranslator.FromHtml(back);
+                        Control[] cls = new Control[arr[i].Controls.Count];
+                        arr[i].Controls.CopyTo(cls, 0);
+                        paintControls(cls, fore, back);
+                    }
+                    else {
+                        arr[i].ForeColor = ColorTranslator.FromHtml(fore);
+                        arr[i].BackColor = ColorTranslator.FromHtml(back);
+                    }
+                }
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -130,10 +161,10 @@ namespace Scammer_Bingo_Reborn
             label3.Text = newScore;
             ((Button)sender).Enabled = false;
             button13.Focus();
-            if(score == 10)
+            if(score == 10 && Settings.messages)
             {
                 MessageBox.Show(Settings.temessage + "\n\n(You can disable these messages in SBR -> Settings)", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            } else if(score == 20)
+            } else if(score == 20 && Settings.messages)
             {
                 MessageBox.Show(Settings.twmessage + "\n\n(You can disable these messages in SBR -> Settings)", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if(Settings.autoreset)

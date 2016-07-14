@@ -26,5 +26,18 @@ namespace Scammer_Bingo_Reborn
             Settings.SaveConfig();
             this.Dispose();
         }
+
+        private void MessageSettings_Load(object sender, EventArgs e)
+        {
+            int color = Settings.global_background;
+            String back = Settings.colors[color];
+            this.BackColor = ColorTranslator.FromHtml(back);
+            int color2 = Settings.global_foreground;
+            String fore = Settings.colors[color2];
+            this.ForeColor = ColorTranslator.FromHtml(fore);
+            Control[] arr = new Control[this.Controls.Count];
+            this.Controls.CopyTo(arr, 0);
+            Form1.paintControls(arr, fore, back);
+        }
     }
 }

@@ -115,6 +115,7 @@
             this.Name = "MessageSettings";
             this.ShowIcon = false;
             this.Text = "Message Configuration";
+            this.Load += new System.EventHandler(this.MessageSettings_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
