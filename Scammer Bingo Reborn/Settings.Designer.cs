@@ -48,6 +48,8 @@
             this.button_Add = new System.Windows.Forms.Button();
             this.listBoxStrings = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBoxDifficulty = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -117,7 +119,7 @@
             // 
             this.button2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(415, 537);
+            this.button2.Location = new System.Drawing.Point(415, 569);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 2;
@@ -130,7 +132,7 @@
             this.button3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.button3.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(334, 537);
+            this.button3.Location = new System.Drawing.Point(333, 569);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 3;
@@ -142,7 +144,7 @@
             // 
             this.button4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Location = new System.Drawing.Point(253, 537);
+            this.button4.Location = new System.Drawing.Point(252, 569);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 4;
@@ -240,6 +242,8 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.comboBoxDifficulty);
+            this.groupBox4.Controls.Add(this.label5);
             this.groupBox4.Controls.Add(this.button_Edit);
             this.groupBox4.Controls.Add(this.button_Remove);
             this.groupBox4.Controls.Add(this.button_Add);
@@ -248,7 +252,7 @@
             this.groupBox4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox4.Location = new System.Drawing.Point(13, 241);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(477, 290);
+            this.groupBox4.Size = new System.Drawing.Size(477, 322);
             this.groupBox4.TabIndex = 6;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Buttons";
@@ -258,7 +262,7 @@
             this.button_Edit.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.button_Edit.Enabled = false;
             this.button_Edit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button_Edit.Location = new System.Drawing.Point(387, 255);
+            this.button_Edit.Location = new System.Drawing.Point(387, 287);
             this.button_Edit.Name = "button_Edit";
             this.button_Edit.Size = new System.Drawing.Size(75, 23);
             this.button_Edit.TabIndex = 9;
@@ -271,30 +275,30 @@
             this.button_Remove.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.button_Remove.Enabled = false;
             this.button_Remove.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button_Remove.Location = new System.Drawing.Point(104, 255);
+            this.button_Remove.Location = new System.Drawing.Point(94, 287);
             this.button_Remove.Name = "button_Remove";
             this.button_Remove.Size = new System.Drawing.Size(75, 23);
             this.button_Remove.TabIndex = 8;
             this.button_Remove.Text = "Remove (TBD)";
             this.button_Remove.UseVisualStyleBackColor = false;
+            this.button_Remove.Click += new System.EventHandler(this.button_Remove_Click);
             // 
             // button_Add
             // 
             this.button_Add.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button_Add.Enabled = false;
             this.button_Add.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button_Add.Location = new System.Drawing.Point(10, 255);
+            this.button_Add.Location = new System.Drawing.Point(10, 287);
             this.button_Add.Name = "button_Add";
             this.button_Add.Size = new System.Drawing.Size(75, 23);
             this.button_Add.TabIndex = 7;
-            this.button_Add.Text = "Add (TBD)";
+            this.button_Add.Text = "Add";
             this.button_Add.UseVisualStyleBackColor = false;
             this.button_Add.Click += new System.EventHandler(this.button_Add_Click);
             // 
             // listBoxStrings
             // 
             this.listBoxStrings.FormattingEnabled = true;
-            this.listBoxStrings.Location = new System.Drawing.Point(10, 37);
+            this.listBoxStrings.Location = new System.Drawing.Point(10, 69);
             this.listBoxStrings.Name = "listBoxStrings";
             this.listBoxStrings.Size = new System.Drawing.Size(452, 212);
             this.listBoxStrings.TabIndex = 1;
@@ -303,11 +307,34 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 20);
+            this.label4.Location = new System.Drawing.Point(15, 53);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(194, 13);
             this.label4.TabIndex = 0;
             this.label4.Text = "Click on a string to change what it says.";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(15, 23);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 13);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Difficulty";
+            // 
+            // comboBoxDifficulty
+            // 
+            this.comboBoxDifficulty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDifficulty.FormattingEnabled = true;
+            this.comboBoxDifficulty.Items.AddRange(new object[] {
+            "Easy (4x3)",
+            "Medium (5x4)",
+            "Hard (6x5)"});
+            this.comboBoxDifficulty.Location = new System.Drawing.Point(94, 20);
+            this.comboBoxDifficulty.Name = "comboBoxDifficulty";
+            this.comboBoxDifficulty.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxDifficulty.TabIndex = 11;
+            this.comboBoxDifficulty.SelectedIndexChanged += new System.EventHandler(this.comboBoxDifficulty_SelectedIndexChanged);
             // 
             // Settings
             // 
@@ -316,7 +343,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.CancelButton = this.button3;
-            this.ClientSize = new System.Drawing.Size(505, 564);
+            this.ClientSize = new System.Drawing.Size(505, 602);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.button4);
@@ -364,5 +391,7 @@
         private System.Windows.Forms.Button button_Edit;
         private System.Windows.Forms.Button button_Remove;
         private System.Windows.Forms.Button button_Add;
+        private System.Windows.Forms.ComboBox comboBoxDifficulty;
+        private System.Windows.Forms.Label label5;
     }
 }

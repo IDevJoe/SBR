@@ -182,7 +182,7 @@
             this.buttonReset.TabIndex = 17;
             this.buttonReset.Text = "Reset";
             this.buttonReset.UseVisualStyleBackColor = true;
-            this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
+            this.buttonReset.Click += new System.EventHandler(this.ButtonReset_Click);
             // 
             // 
             // label5

@@ -17,22 +17,8 @@ namespace Scammer_Bingo_Reborn
         public static Form1 defaultForm = null;
         Button[,] btns;
 
-        //// "SETTINGS"
-
-        //Button text
-        private string[] buttonTextPool = 
-            {
-                "Run","netstat","Stopped Services", "I can't understand you sir","eventvwr","Secure Server","msconfig","The scammer knows...","cmd","Do One Thing","Microsoft Certified", "Corrupted Drivers","tree","Network Security","syskey","Trying to stick to the script","Fuck off", "hh h", "support.me", "$$$"
-            };
-
-        int sizeX = 5, sizeY = 4;
-
-        //Percentage of white space between buttons
-        private float whitespaceX = 0.1f, whitespaceY = 0.1f;
-
         //Offset from the top of the GroupBox (needed or the first button will go on top of the GroupBox's text)
-        private int offsetY = 10;
-        ////
+        private const int offsetY = 10;
 
         public Form1()
         {
@@ -85,13 +71,7 @@ namespace Scammer_Bingo_Reborn
 
         private void ButtonReset_Click(object sender, EventArgs e)
         { 
-            label3.Text = "0/" + btns.Length;
-
-            buttonReset.Focus();
-            PrepareButtons(Settings.LoadStringArray());
-
             ResetScoreAndButtons();
-
         }
 
         private void BingoButton_Click(object sender, EventArgs e)
@@ -117,7 +97,7 @@ namespace Scammer_Bingo_Reborn
                 }
             }
 
-            string[,] buttonText = SelectButtonNames(sizeX, sizeY, strings);
+            string[,] buttonText = SelectButtonNames(Settings.settings.sizeX, Settings.settings.sizeY, strings);
 
             btns = new Button[buttonText.GetLength(0), buttonText.GetLength(1)];
 
@@ -144,9 +124,9 @@ namespace Scammer_Bingo_Reborn
             }
             Random RNG = new Random();
 
-            for (int i = 0; i < sizeX; i++)
+            for (int i = 0; i < Settings.settings.sizeX; i++)
             {
-                for (int j = 0; j < sizeY; j++)
+                for (int j = 0; j < Settings.settings.sizeY; j++)
                 {
                     int ti;
                     do
@@ -171,13 +151,13 @@ namespace Scammer_Bingo_Reborn
             {
                 for (int j = 0; j <nY; j++)
                 {
-                    int posX = Convert.ToInt32(((float)maxX / nX) * (i + whitespaceX/2));
-                    int posY = Convert.ToInt32(((float)maxY / nY) * ( j + whitespaceY/2)) + offsetY;
+                    int posX = Convert.ToInt32(((float)maxX / nX) * (i + Settings.settings.whitespaceX/2));
+                    int posY = Convert.ToInt32(((float)maxY / nY) * ( j + Settings.settings.whitespaceY/2)) + offsetY;
                     btns[i, j].Location = new Point(posX, posY);
 
                     int width, heigth;
-                    width = Convert.ToInt32((float)maxX / nX * (1 - whitespaceX));
-                    heigth = Convert.ToInt32((float)maxY / nY * (1 -whitespaceY));
+                    width = Convert.ToInt32((float)maxX / nX * (1 - Settings.settings.whitespaceX));
+                    heigth = Convert.ToInt32((float)maxY / nY * (1 -Settings.settings.whitespaceY));
 
                     btns[i, j].Size = new Size(width, heigth);
 
@@ -206,11 +186,6 @@ namespace Scammer_Bingo_Reborn
             }
         }
 
-        private void buttonReset_Click(object sender, EventArgs e)
-        {
-            ResetScoreAndButtons();
-        }
-
         public void ResetScoreAndButtons()
         {
             score = 0;
@@ -219,6 +194,7 @@ namespace Scammer_Bingo_Reborn
             {
                 btn.Enabled = true;
             }
+            PrepareButtons(Settings.LoadStringArray());
             buttonReset.Focus();
         }
 
