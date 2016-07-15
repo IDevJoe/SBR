@@ -126,6 +126,18 @@ namespace Scammer_Bingo_Reborn
             comboBox1.SelectedIndex = settings.global_background;
             comboBox2.SelectedIndex = settings.global_foreground;
 
+            switch(settings.sizeX)
+            {
+                case 4:
+                    comboBoxDifficulty.SelectedIndex = 0;
+                    break;
+                case 5:
+                    comboBoxDifficulty.SelectedIndex = 1;
+                    break;
+                case 6:
+                    comboBoxDifficulty.SelectedIndex = 2;
+                    break;
+            }
             int color = settings.global_background;
             String back = Settings.colors[color];
             this.BackColor = ColorTranslator.FromHtml(back);
@@ -303,9 +315,8 @@ namespace Scammer_Bingo_Reborn
                     }
                     else
                     {
+                        comboBoxDifficulty.SelectedIndex = 0;
                         MessageBox.Show("You need to have at least " + 5 * 4 + " strings to select this, difficulty, add more!");
-                        listBoxStrings.SelectedIndex = 0;
-                        listBoxStrings.Text = listBoxStrings.SelectedItem.ToString();
                     }
                     break;
                 case 2:
@@ -316,9 +327,8 @@ namespace Scammer_Bingo_Reborn
                     }
                     else
                     {
+                        comboBoxDifficulty.SelectedIndex = 1;
                         MessageBox.Show("You need to have at least " + 6 * 5 + " strings to select this, difficulty, add more!");
-                        listBoxStrings.SelectedIndex = 1;
-                        listBoxStrings.Text= listBoxStrings.SelectedItem.ToString();
                     }
                     break;
             }
