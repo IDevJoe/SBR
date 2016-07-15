@@ -305,6 +305,7 @@ namespace Scammer_Bingo_Reborn
                     {
                         MessageBox.Show("You need to have at least " + 5 * 4 + " strings to select this, difficulty, add more!");
                         listBoxStrings.SelectedIndex = 0;
+                        listBoxStrings.Text = listBoxStrings.SelectedItem.ToString();
                     }
                     break;
                 case 2:
@@ -317,6 +318,7 @@ namespace Scammer_Bingo_Reborn
                     {
                         MessageBox.Show("You need to have at least " + 6 * 5 + " strings to select this, difficulty, add more!");
                         listBoxStrings.SelectedIndex = 1;
+                        listBoxStrings.Text= listBoxStrings.SelectedItem.ToString();
                     }
                     break;
             }
