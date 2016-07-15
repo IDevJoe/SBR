@@ -16,10 +16,10 @@ namespace Scammer_Bingo_Reborn
     public partial class Settings : Form
 
     {
-        static string savepath = "config.ini";
+        const string savepath = "config.ini";
 
                                                                   //Default values
-        public static SavedSettings settings = new SavedSettings(false,false, "You have successfully found a scammer!", "Halfway there! You can probably rat out the scammer now.",10,9, new string[] {"Run", "netstat", "Stopped Services", "I can't understand you sir", "eventvwr", "Secure Server", "msconfig", "The scammer knows...", "cmd", "Do One Thing", "Microsoft Certified", "Corrupted Drivers", "tree", "Network Security", "syskey", "Trying to stick to the script", "Fuck off", "hh h", "support.me", "$$$"}, 5, 4, 0.1f, 0.1f);
+        public static SavedSettings settings = new SavedSettings(false,false, "You have successfully found a scammer!", "Halfway there! You can probably rat out the scammer now.",10,9, new string[] {"Run", "netstat", "Stopped Services", "I can't understand you sir", "eventvwr", "Secure Server", "msconfig", "The scammer knows...", "cmd", "Do One Thing", "Microsoft Certified", "Corrupted Drivers", "tree", "Network Security", "syskey", "Trying to stick to the script", "Fuck off", "hh h", "support.me", "$$$"});
 
         public static string[] colors = new string[] { "#006600", "#009900", "#00e600", "#003399", "#0033cc", "#0099ff", "#ff3399", "#ff3300", "#ff5c33", "#ffffff", "#737373", "#000000" };
 
@@ -45,22 +45,13 @@ namespace Scammer_Bingo_Reborn
 
         public static void SaveConfig()
         {
-            savepath = GetSavePath();
             FileIO.SaveFile(savepath, settings);
         }
 
         public static void ReadConfig()
         {
-            savepath = GetSavePath();
             if(File.Exists(savepath))
             settings = FileIO.LoadFile(savepath);
-        }
-
-        private static string GetSavePath()
-        {
-            string s = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            s += @"\ScammerBingoReborn\config.ini";
-            return s;
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -94,14 +85,12 @@ namespace Scammer_Bingo_Reborn
         private void button4_Click(object sender, EventArgs e)
         {
             SaveConfig();
-            Form1.defaultForm.ResetScoreAndButtons();
             this.Dispose();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             SaveConfig();
-            Form1.defaultForm.ResetScoreAndButtons();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -165,11 +154,8 @@ namespace Scammer_Bingo_Reborn
             public string twmessage, temessage;
             public int global_background, global_foreground;
             public string[] strings;
-            public int sizeX, sizeY;
-            public float whitespaceX, whitespaceY;
-            public int[] scoreHistory; //May be implemented in the future
 
-            public SavedSettings(bool _autoreset,bool _messages, string _twmessage, string _temessage, int _background, int _foreground, string[] _strings,int _sizeX, int _sizeY, float _whitespaceX, float _whitespaceY)
+            public SavedSettings(bool _autoreset,bool _messages, string _twmessage, string _temessage, int _background, int _foreground, string[] _strings)
             {
                 autoreset = _autoreset;
                 messages = _messages;
@@ -178,10 +164,6 @@ namespace Scammer_Bingo_Reborn
                 global_background = _background;
                 global_foreground = _foreground;
                 strings = _strings;
-                sizeX = _sizeX;
-                sizeY = _sizeY;
-                whitespaceX = _whitespaceX;
-                whitespaceY = _whitespaceY;
             }
         }
 
@@ -189,9 +171,6 @@ namespace Scammer_Bingo_Reborn
         {
             public static void SaveFile(string path, SavedSettings toSave)
             {
-                if (!Directory.Exists(Path.GetDirectoryName(path)))
-                    Directory.CreateDirectory(Path.GetDirectoryName(path));
-
                 using (FileStream fs = new FileStream(path, FileMode.Create, FileAccess.Write))
                 {
                     MemoryStream ms = Serialize(toSave);
@@ -235,93 +214,13 @@ namespace Scammer_Bingo_Reborn
 
         private void button_Add_Click(object sender, EventArgs e)
         {
-            int l0 = settings.strings.Length;
-            string[] tsarray = new string[l0 + 1];
-            for (int i = 0; i < l0; i++)
-            {
-                tsarray[i] = settings.strings[i];
-            }
-            tsarray[l0] = "<new>";
-            settings.strings = tsarray;
-            UpdateList(listBoxStrings);
-            listBoxStrings.SelectedItem = tsarray[l0];
 
-            button_Edit_Click(sender, e);
-        }
-
-        private void button_Remove_Click(object sender, EventArgs e)
-        {
-            if (settings.strings.Length > settings.sizeX * settings.sizeY)
-            {
-                int l0 = settings.strings.Length;
-                string[] tsarray = new string[l0 - 1];
-                for (int i = 0, c = 0; i < l0; i++)
-                {
-                    if (i == listBoxStrings.SelectedIndex)
-                        continue;
-
-                    tsarray[c] = settings.strings[i];
-                    c++;
-                }
-                settings.strings = tsarray;
-                UpdateList(listBoxStrings); 
-            }
-            else
-            {
-                MessageBox.Show("ERROR, you can't remove anyomore buttons to play with the current difficulty setting!!!");
-            }
         }
 
         private void listBoxStrings_SelectedIndexChanged(object sender, EventArgs e)
         {
             button_Edit.Enabled = true;
-            button_Remove.Enabled = true;
         }
-
-        private void comboBoxDifficulty_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            switch(comboBoxDifficulty.SelectedIndex)
-            {
-                case 0:
-                    if(settings.strings.Length >= 4*3)
-                    {
-                        settings.sizeX = 4;
-                        settings.sizeY = 3;
-                    }
-                    else
-                    {
-                        MessageBox.Show("You need to have at least " + 4 * 3 + " strings to select this, difficulty, add more!");
-                    }
-
-                    
-                    break;
-                case 1:
-                    if (settings.strings.Length >= 5 * 4)
-                    {
-                        settings.sizeX = 5;
-                        settings.sizeY = 4;
-                    }
-                    else
-                    {
-                        MessageBox.Show("You need to have at least " + 5 * 4 + " strings to select this, difficulty, add more!");
-                        listBoxStrings.SelectedIndex = 0;
-                    }
-                    break;
-                case 2:
-                    if (settings.strings.Length >= 6 * 5)
-                    {
-                        settings.sizeX = 6;
-                        settings.sizeY = 5;
-                    }
-                    else
-                    {
-                        MessageBox.Show("You need to have at least " + 6 * 5 + " strings to select this, difficulty, add more!");
-                        listBoxStrings.SelectedIndex = 1;
-                    }
-                    break;
-            }
-        }
-                
     }
 
 
