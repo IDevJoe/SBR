@@ -242,5 +242,10 @@ namespace Scammer_Bingo_Reborn
         {
             System.Diagnostics.Process.Start("https://play.google.com/store/apps/details?id=com.xelitexirish.scammerbingo");
         }
+
+        private void youTubeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.youtube.com/user/LewissTech");
+        }
     }
 }

@@ -41,6 +41,9 @@
             this.learnHowToContributeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.releasesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportAnIssueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.partnersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xeliteXirishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.androidScammerBingoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonReset = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -51,9 +54,8 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.partnersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xeliteXirishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.androidScammerBingoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lewissTechToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.youTubeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -102,26 +104,26 @@
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.settingsToolStripMenuItem.Text = "Settings";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(127, 6);
             // 
             // contactToolStripMenuItem
             // 
             this.contactToolStripMenuItem.Name = "contactToolStripMenuItem";
-            this.contactToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.contactToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.contactToolStripMenuItem.Text = "Contact";
             this.contactToolStripMenuItem.Click += new System.EventHandler(this.contactToolStripMenuItem_Click);
             // 
             // aboutSBRToolStripMenuItem
             // 
             this.aboutSBRToolStripMenuItem.Name = "aboutSBRToolStripMenuItem";
-            this.aboutSBRToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutSBRToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.aboutSBRToolStripMenuItem.Text = "About SBR";
             this.aboutSBRToolStripMenuItem.Click += new System.EventHandler(this.aboutSBRToolStripMenuItem_Click);
             // 
@@ -174,6 +176,31 @@
             this.reportAnIssueToolStripMenuItem.Text = "Report an issue";
             this.reportAnIssueToolStripMenuItem.Click += new System.EventHandler(this.reportAnIssueToolStripMenuItem_Click);
             // 
+            // partnersToolStripMenuItem
+            // 
+            this.partnersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.xeliteXirishToolStripMenuItem,
+            this.lewissTechToolStripMenuItem});
+            this.partnersToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.partnersToolStripMenuItem.Name = "partnersToolStripMenuItem";
+            this.partnersToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.partnersToolStripMenuItem.Text = "Partners";
+            // 
+            // xeliteXirishToolStripMenuItem
+            // 
+            this.xeliteXirishToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.androidScammerBingoToolStripMenuItem});
+            this.xeliteXirishToolStripMenuItem.Name = "xeliteXirishToolStripMenuItem";
+            this.xeliteXirishToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.xeliteXirishToolStripMenuItem.Text = "XeliteXirish";
+            // 
+            // androidScammerBingoToolStripMenuItem
+            // 
+            this.androidScammerBingoToolStripMenuItem.Name = "androidScammerBingoToolStripMenuItem";
+            this.androidScammerBingoToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.androidScammerBingoToolStripMenuItem.Text = "Android Scammer Bingo";
+            this.androidScammerBingoToolStripMenuItem.Click += new System.EventHandler(this.androidScammerBingoToolStripMenuItem_Click);
+            // 
             // buttonReset
             // 
             this.buttonReset.Location = new System.Drawing.Point(42, 19);
@@ -183,7 +210,6 @@
             this.buttonReset.Text = "Reset";
             this.buttonReset.UseVisualStyleBackColor = true;
             this.buttonReset.Click += new System.EventHandler(this.ButtonReset_Click);
-            // 
             // 
             // label5
             // 
@@ -207,18 +233,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Score";
             // 
-            // groupBox_BingoBoard
-            // 
-            this.groupBox_BingoBoard.Location = new System.Drawing.Point(12, 35);
-            this.groupBox_BingoBoard.Name = "groupBox_BingoBoard";
-            this.groupBox_BingoBoard.Size = new System.Drawing.Size(597, 366);
-            this.groupBox_BingoBoard.TabIndex = 20;
-            this.groupBox_BingoBoard.TabStop = false;
-            this.groupBox_BingoBoard.Text = "Bingo Board";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.buttonReset);
             // groupBox_BingoBoard
             // 
             this.groupBox_BingoBoard.BackColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -304,29 +318,20 @@
             this.linkLabel2.VisitedLinkColor = System.Drawing.Color.Silver;
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
-            // partnersToolStripMenuItem
+            // lewissTechToolStripMenuItem
             // 
-            this.partnersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.xeliteXirishToolStripMenuItem});
-            this.partnersToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.partnersToolStripMenuItem.Name = "partnersToolStripMenuItem";
-            this.partnersToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
-            this.partnersToolStripMenuItem.Text = "Partners";
+            this.lewissTechToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.youTubeToolStripMenuItem});
+            this.lewissTechToolStripMenuItem.Name = "lewissTechToolStripMenuItem";
+            this.lewissTechToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.lewissTechToolStripMenuItem.Text = "Lewis\'s Tech";
             // 
-            // xeliteXirishToolStripMenuItem
+            // youTubeToolStripMenuItem
             // 
-            this.xeliteXirishToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.androidScammerBingoToolStripMenuItem});
-            this.xeliteXirishToolStripMenuItem.Name = "xeliteXirishToolStripMenuItem";
-            this.xeliteXirishToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.xeliteXirishToolStripMenuItem.Text = "XeliteXirish";
-            // 
-            // androidScammerBingoToolStripMenuItem
-            // 
-            this.androidScammerBingoToolStripMenuItem.Name = "androidScammerBingoToolStripMenuItem";
-            this.androidScammerBingoToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.androidScammerBingoToolStripMenuItem.Text = "Android Scammer Bingo";
-            this.androidScammerBingoToolStripMenuItem.Click += new System.EventHandler(this.androidScammerBingoToolStripMenuItem_Click);
+            this.youTubeToolStripMenuItem.Name = "youTubeToolStripMenuItem";
+            this.youTubeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.youTubeToolStripMenuItem.Text = "YouTube";
+            this.youTubeToolStripMenuItem.Click += new System.EventHandler(this.youTubeToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -390,6 +395,8 @@
         private System.Windows.Forms.ToolStripMenuItem partnersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xeliteXirishToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem androidScammerBingoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lewissTechToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem youTubeToolStripMenuItem;
     }
 }
 
