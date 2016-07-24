@@ -43,13 +43,13 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.comboBoxDifficulty = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.button_Edit = new System.Windows.Forms.Button();
             this.button_Remove = new System.Windows.Forms.Button();
             this.button_Add = new System.Windows.Forms.Button();
             this.listBoxStrings = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBoxDifficulty = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -257,6 +257,29 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Buttons";
             // 
+            // comboBoxDifficulty
+            // 
+            this.comboBoxDifficulty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDifficulty.FormattingEnabled = true;
+            this.comboBoxDifficulty.Items.AddRange(new object[] {
+            "Easy (4x3)",
+            "Medium (5x4)",
+            "Hard (6x5)"});
+            this.comboBoxDifficulty.Location = new System.Drawing.Point(94, 20);
+            this.comboBoxDifficulty.Name = "comboBoxDifficulty";
+            this.comboBoxDifficulty.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxDifficulty.TabIndex = 11;
+            this.comboBoxDifficulty.SelectedIndexChanged += new System.EventHandler(this.comboBoxDifficulty_SelectedIndexChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(15, 23);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 13);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Difficulty";
+            // 
             // button_Edit
             // 
             this.button_Edit.BackColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -307,34 +330,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 53);
+            this.label4.Location = new System.Drawing.Point(7, 53);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(194, 13);
             this.label4.TabIndex = 0;
             this.label4.Text = "Click on a string to change what it says.";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(15, 23);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 13);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Difficulty";
-            // 
-            // comboBoxDifficulty
-            // 
-            this.comboBoxDifficulty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxDifficulty.FormattingEnabled = true;
-            this.comboBoxDifficulty.Items.AddRange(new object[] {
-            "Easy (4x3)",
-            "Medium (5x4)",
-            "Hard (6x5)"});
-            this.comboBoxDifficulty.Location = new System.Drawing.Point(94, 20);
-            this.comboBoxDifficulty.Name = "comboBoxDifficulty";
-            this.comboBoxDifficulty.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxDifficulty.TabIndex = 11;
-            this.comboBoxDifficulty.SelectedIndexChanged += new System.EventHandler(this.comboBoxDifficulty_SelectedIndexChanged);
             // 
             // Settings
             // 

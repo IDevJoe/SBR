@@ -46,6 +46,15 @@ namespace Scammer_Bingo_Reborn
         public static void SaveConfig()
         {
             savepath = GetSavePath();
+            int color = Settings.settings.global_background;
+            String back = Settings.colors[color];
+            Form1.defaultForm.BackColor = ColorTranslator.FromHtml(back);
+            int color2 = Settings.settings.global_foreground;
+            String fore = Settings.colors[color2];
+            Form1.defaultForm.ForeColor = ColorTranslator.FromHtml(fore);
+            Control[] arr = new Control[Form1.defaultForm.Controls.Count];
+            Form1.defaultForm.Controls.CopyTo(arr, 0);
+            Form1.paintControls(arr, fore, back);
             FileIO.SaveFile(savepath, settings);
         }
 
