@@ -14,3 +14,7 @@ You can download by going [here](https://github.com/HexxiumCreations/Scammer-Bin
 
 - [Android](https://play.google.com/store/apps/details?id=com.xelitexirish.scammerbingo)
 - [Java (Universal)](https://github.com/HexxiumCreations/spammer-bingo-desktop-java)
+
+# HexxiumCreations
+
+Those making commits from HexxiumCreations, PLEASE create a new branch, then create a pull request. Your request will be reviewed by Joe, and then will be approved/closed. Please don't commit directly without permission, or your commit will be reverted.
