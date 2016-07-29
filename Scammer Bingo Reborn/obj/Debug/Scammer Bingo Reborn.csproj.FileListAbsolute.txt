@@ -1,0 +1,17 @@
+C:\Users\Jayden\Source\Repos\Scammer-Bingo-Reborn\Scammer Bingo Reborn\bin\Debug\Scammer Bingo Reborn.exe.config
+C:\Users\Jayden\Source\Repos\Scammer-Bingo-Reborn\Scammer Bingo Reborn\bin\Debug\Scammer Bingo Reborn.exe.manifest
+C:\Users\Jayden\Source\Repos\Scammer-Bingo-Reborn\Scammer Bingo Reborn\bin\Debug\Scammer Bingo Reborn.application
+C:\Users\Jayden\Source\Repos\Scammer-Bingo-Reborn\Scammer Bingo Reborn\bin\Debug\Scammer Bingo Reborn.exe
+C:\Users\Jayden\Source\Repos\Scammer-Bingo-Reborn\Scammer Bingo Reborn\bin\Debug\Scammer Bingo Reborn.pdb
+C:\Users\Jayden\Source\Repos\Scammer-Bingo-Reborn\Scammer Bingo Reborn\obj\Debug\Scammer Bingo Reborn.csprojResolveAssemblyReference.cache
+C:\Users\Jayden\Source\Repos\Scammer-Bingo-Reborn\Scammer Bingo Reborn\obj\Debug\Scammer_Bingo_Reborn.AboutBox1.resources
+C:\Users\Jayden\Source\Repos\Scammer-Bingo-Reborn\Scammer Bingo Reborn\obj\Debug\Scammer_Bingo_Reborn.ButtonTextInput.resources
+C:\Users\Jayden\Source\Repos\Scammer-Bingo-Reborn\Scammer Bingo Reborn\obj\Debug\Scammer_Bingo_Reborn.Form1.resources
+C:\Users\Jayden\Source\Repos\Scammer-Bingo-Reborn\Scammer Bingo Reborn\obj\Debug\Scammer_Bingo_Reborn.MessageSettings.resources
+C:\Users\Jayden\Source\Repos\Scammer-Bingo-Reborn\Scammer Bingo Reborn\obj\Debug\Scammer_Bingo_Reborn.Properties.Resources.resources
+C:\Users\Jayden\Source\Repos\Scammer-Bingo-Reborn\Scammer Bingo Reborn\obj\Debug\Scammer_Bingo_Reborn.Settings.resources
+C:\Users\Jayden\Source\Repos\Scammer-Bingo-Reborn\Scammer Bingo Reborn\obj\Debug\Scammer Bingo Reborn.csproj.GenerateResource.Cache
+C:\Users\Jayden\Source\Repos\Scammer-Bingo-Reborn\Scammer Bingo Reborn\obj\Debug\Scammer Bingo Reborn.exe.manifest
+C:\Users\Jayden\Source\Repos\Scammer-Bingo-Reborn\Scammer Bingo Reborn\obj\Debug\Scammer Bingo Reborn.application
+C:\Users\Jayden\Source\Repos\Scammer-Bingo-Reborn\Scammer Bingo Reborn\obj\Debug\Scammer Bingo Reborn.exe
+C:\Users\Jayden\Source\Repos\Scammer-Bingo-Reborn\Scammer Bingo Reborn\obj\Debug\Scammer Bingo Reborn.pdb

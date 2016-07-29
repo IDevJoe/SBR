@@ -169,12 +169,21 @@ namespace Scammer_Bingo_Reborn
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (comboBox1.SelectedIndex == comboBox2.SelectedIndex)
+            {
+                MessageBox.Show("It is not recommended to set the same color as both options. ");
+            }
             ComboBox b = (ComboBox)sender;
             settings.global_background = b.SelectedIndex;
+
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (comboBox1.SelectedIndex == comboBox2.SelectedIndex)
+            {
+                MessageBox.Show("It is not recommended to set the same color as both options. ");
+            }
             ComboBox b = (ComboBox)sender;
             settings.global_foreground = b.SelectedIndex;
         }
