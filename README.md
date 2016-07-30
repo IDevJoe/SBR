@@ -1,6 +1,6 @@
 # Scammer Bingo Reborn
 
-This is the community version of WindowsLogicProduction's Scammer Bingo.
+This is the community version of Lewis's Tech's Scammer Bingo.
 
 # How to contribute
 
