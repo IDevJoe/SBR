@@ -1,0 +1,16 @@
+*.suo
+*.user
+*.sln.docstates
+
+[Dd]ebug/
+[Rr]elease/
+x64/
+build/
+[Bb]in/
+[Oo]bj/
+
+Desktop.ini
+Thumbs.db
+ethumbs.db
+.DS_Store
+*.sln
