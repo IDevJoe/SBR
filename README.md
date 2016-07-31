@@ -2,6 +2,9 @@
 
 This is the community version of Jim Browning's Scammer Bingo.
 
+
+![Screenshot](screenshot.png)
+
 # How to contribute
 
 Click [here](https://github.com/HexxiumCreations/Scammer-Bingo-Reborn/wiki/How-to-contribute) to be directed to the wiki page.
