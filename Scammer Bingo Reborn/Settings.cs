@@ -330,7 +330,7 @@ namespace Scammer_Bingo_Reborn
                     }
                     else
                     {
-                        MessageBox.Show("You need to have at least " + 4 * 3 + " strings to select this, difficulty, add more!");
+                        MessageBox.Show("You need to have at least " + 4 * 3 + " strings to select this, difficulty, add " + (4*3- settings.strings.Length) + " more!");
                     }
 
                     
@@ -344,7 +344,7 @@ namespace Scammer_Bingo_Reborn
                     else
                     {
                         comboBoxDifficulty.SelectedIndex = 0;
-                        MessageBox.Show("You need to have at least " + 5 * 4 + " strings to select this, difficulty, add more!");
+                        MessageBox.Show("You need to have at least " + 5 * 4 + " strings to select this, difficulty, add " + (5 * 4 - settings.strings.Length) + " more!");
                     }
                     break;
                 case 2:
@@ -356,7 +356,7 @@ namespace Scammer_Bingo_Reborn
                     else
                     {
                         comboBoxDifficulty.SelectedIndex = 1;
-                        MessageBox.Show("You need to have at least " + 6 * 5 + " strings to select this, difficulty, add more!");
+                        MessageBox.Show("You need to have at least " + 6 * 5 + " strings to select this, difficulty, add " + (6 * 5 - settings.strings.Length) + " more!");
                     }
                     break;
             }
