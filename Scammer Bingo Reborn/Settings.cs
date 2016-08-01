@@ -226,54 +226,6 @@ namespace Scammer_Bingo_Reborn
             }
         }
 
-        private static class FileIO
-        {
-            public static void SaveFile(string path, SavedSettings toSave)
-            {
-                if (!Directory.Exists(Path.GetDirectoryName(path)))
-                    Directory.CreateDirectory(Path.GetDirectoryName(path));
-
-                using (FileStream fs = new FileStream(path, FileMode.Create, FileAccess.Write))
-                {
-                    MemoryStream ms = Serialize(toSave);
-                    ms.WriteTo(fs);
-                }
-            }
-
-            public static SavedSettings LoadFile(string path)
-            {
-                using (FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read))
-                {
-                    return Deserialize<SavedSettings>(fs);
-                }
-            }
-
-            static private MemoryStream Serialize(object toSerialize)
-            {
-                if (toSerialize != null)
-                {
-                    MemoryStream stream = new MemoryStream();
-                    IFormatter formatter = new BinaryFormatter();
-                    formatter.Serialize(stream, toSerialize);
-                    stream.Position = 0;
-                    return stream;
-                }
-                else return new MemoryStream();
-            }
-
-            static private T Deserialize<T>(Stream stream)
-            {
-                if (stream.Length > 0)
-                {
-                    IFormatter formatter = new BinaryFormatter();
-                    stream.Seek(0, SeekOrigin.Begin);
-                    object o = formatter.Deserialize(stream);
-                    return (T)o;
-                }
-                else return default(T);
-            }
-        }
-
         private void button_Add_Click(object sender, EventArgs e)
         {
             int l0 = settings.strings.Length;

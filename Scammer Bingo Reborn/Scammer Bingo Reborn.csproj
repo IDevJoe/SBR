@@ -95,6 +95,7 @@
     <Compile Include="ButtonTextInput.Designer.cs">
       <DependentUpon>ButtonTextInput.cs</DependentUpon>
     </Compile>
+    <Compile Include="FileIO.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
