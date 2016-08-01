@@ -4,7 +4,7 @@ This is the community version of Jim Browning's Scammer Bingo.
 
 
 ![Screenshot](screenshot.png)
-![Screenshot](sbr2.png)
+![Screenshot](screenshot2.png)
 
 
 # How to contribute
