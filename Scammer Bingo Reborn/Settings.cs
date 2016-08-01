@@ -199,6 +199,17 @@ namespace Scammer_Bingo_Reborn
             public float whitespaceX, whitespaceY;
             public int[] scoreHistory; //May be implemented in the future
 
+            public void AddString(string toAdd)
+            {
+                string[] newS = new string[strings.Length + 1];
+                for (int i = 0; i < strings.Length; i++)
+                {
+                    newS[i] = strings[i];
+                }
+                newS[strings.Length] = toAdd;
+                strings = newS;
+            }
+
             public SavedSettings(bool _autoreset,bool _messages, string _twmessage, string _temessage, int _background, int _foreground, string[] _strings,int _sizeX, int _sizeY, float _whitespaceX, float _whitespaceY)
             {
                 autoreset = _autoreset;
@@ -272,7 +283,6 @@ namespace Scammer_Bingo_Reborn
                 tsarray[i] = settings.strings[i];
             }
             tsarray[l0] = "<new>";
-            settings.strings = tsarray;
             UpdateList(listBoxStrings);
             listBoxStrings.SelectedItem = tsarray[l0];
 
