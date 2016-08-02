@@ -27,7 +27,8 @@ namespace Scammer_Bingo_Reborn
             defaultForm = this;
             Settings.settings.cversion = "1.2.0.0";
             Settings.SaveConfig();
-            if (File.Exists("update")) { File.Delete("update");  }
+            if (Directory.Exists("update")) Directory.Delete("update", true);
+            UpdateBackend.checkForUpdates(this);
         }
 
         private void aboutSBRToolStripMenuItem_Click(object sender, EventArgs e)

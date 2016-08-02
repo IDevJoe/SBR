@@ -53,9 +53,10 @@ namespace Scammer_Bingo_Reborn
         {
             WebClient l = new WebClient();
             l.DownloadFile("https://www.hexxiumcreations.com/community/latestVersion.zip", "latestVersion.zip");
+            
             ZipFile.ExtractToDirectory("latestVersion.zip", "update");
-            File.Delete("latestVersion.zip");
-            System.Diagnostics.Process.Start("update/setup.exe");
+            File.Delete("update.zip");
+            System.Diagnostics.Process.Start("update\\setup.exe");
         }
 
     }
