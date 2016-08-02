@@ -45,10 +45,10 @@ namespace Scammer_Bingo_Reborn
         public static void update()
         {
             WebClient l = new WebClient();
-            l.DownloadFile("https://hexxiumcreations.com/community/latestVersion.zip", "update.zip");
-            ZipFile.ExtractToDirectory(@"update.zip", @"update");
-            File.Delete(@"update.zip");
-            System.Diagnostics.Process.Start(@"update/setup.exe");
+            l.DownloadFile("https://www.hexxiumcreations.com/community/latestVersion.zip", "latestVersion.zip");
+            ZipFile.ExtractToDirectory("latestVersion.zip", "update");
+            File.Delete("latestVersion.zip");
+            System.Diagnostics.Process.Start("update/setup.exe");
         }
 
     }
