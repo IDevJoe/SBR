@@ -135,18 +135,21 @@ namespace Scammer_Bingo_Reborn
             comboBox1.SelectedIndex = settings.global_background;
             comboBox2.SelectedIndex = settings.global_foreground;
 
-            switch(settings.sizeX)
-            {
-                case 4:
-                    comboBoxDifficulty.SelectedIndex = 0;
-                    break;
-                case 5:
-                    comboBoxDifficulty.SelectedIndex = 1;
-                    break;
-                case 6:
-                    comboBoxDifficulty.SelectedIndex = 2;
-                    break;
-            }
+            comboBoxDifficulty.SelectedIndexChanged -= comboBoxDifficulty_SelectedIndexChanged; //Detach event method
+            if (settings.sizeX == 4 && settings.sizeY == 3)
+                comboBoxDifficulty.SelectedIndex = 0;
+
+            else if (settings.sizeX == 5 && settings.sizeY == 4)
+                comboBoxDifficulty.SelectedIndex = 1;
+
+            else if (settings.sizeX == 6 && settings.sizeY == 5)
+                comboBoxDifficulty.SelectedIndex = 2;
+
+            else
+                comboBoxDifficulty.SelectedIndex = 3;
+
+            diffSelectedIndex = comboBoxDifficulty.SelectedIndex;
+            comboBoxDifficulty.SelectedIndexChanged += comboBoxDifficulty_SelectedIndexChanged; //Reattach event method
             int color = settings.global_background;
             String back = Settings.colors[color];
             this.BackColor = ColorTranslator.FromHtml(back);
@@ -272,6 +275,8 @@ namespace Scammer_Bingo_Reborn
             button_Remove.Enabled = true;
         }
 
+        private int diffSelectedIndex;
+
         private void comboBoxDifficulty_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch(comboBoxDifficulty.SelectedIndex)
@@ -313,7 +318,11 @@ namespace Scammer_Bingo_Reborn
                         MessageBox.Show("You need to have at least " + 6 * 5 + " strings to select this, difficulty, add " + (6 * 5 - settings.strings.Length) + " more!");
                     }
                     break;
+                case 3:
+                    new CustomSizeSelector(diffSelectedIndex,comboBoxDifficulty).ShowDialog();
+                    break;
             }
+            diffSelectedIndex = comboBoxDifficulty.SelectedIndex;
         }
                 
     } 

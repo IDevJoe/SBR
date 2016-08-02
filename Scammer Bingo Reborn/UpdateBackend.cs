@@ -17,12 +17,19 @@ namespace Scammer_Bingo_Reborn
         {
             HttpWebRequest r = WebRequest.CreateHttp("http://hexxiumcreations.com/community/ver.txt");
             r.UserAgent = "Scammer Bingo Auto-Update";
-            WebResponse resp = r.GetResponse();
-            Stream data = resp.GetResponseStream();
-            StreamReader read = new StreamReader(data);
-            string ver = read.ReadToEnd();
-            read.Close();
-            resp.Close();
+            string ver;
+            using (WebResponse resp = r.GetResponse())
+            {
+                using (Stream data = resp.GetResponseStream())
+                {
+                    using (StreamReader read = new StreamReader(data))
+                    {
+                        ver = read.ReadToEnd();
+                    }
+                }
+            }
+
+                
             return new object[]{ (ver != Settings.settings.cversion), ver, Settings.settings.cversion };
         }
 
