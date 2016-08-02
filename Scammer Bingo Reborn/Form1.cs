@@ -25,7 +25,7 @@ namespace Scammer_Bingo_Reborn
         {
             InitializeComponent();
             defaultForm = this;
-            Settings.settings.cversion = "1.2.0.0";
+            Settings.settings.cversion = "1.3.0.0";
             Settings.SaveConfig();
             if (Directory.Exists("update")) Directory.Delete("update", true);
         }
@@ -256,7 +256,11 @@ namespace Scammer_Bingo_Reborn
 
         private void checkForUpdatesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            UpdateBackend.checkForUpdates(this);
+            bool res = UpdateBackend.checkForUpdates(this);
+            if(!res)
+            {
+                MessageBox.Show(null, "You're already on the latest update!", "No update available", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

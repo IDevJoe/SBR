@@ -33,7 +33,7 @@ namespace Scammer_Bingo_Reborn
             return new object[]{ (ver != Settings.settings.cversion), ver, Settings.settings.cversion };
         }
 
-        public static void checkForUpdates(Form1 m)
+        public static bool checkForUpdates(Form1 m)
         {
             object[] response = UpdateBackend.updateAvail();
             bool av = (bool)response[0];
@@ -48,6 +48,7 @@ namespace Scammer_Bingo_Reborn
                     m.Dispose();
                 }
             }
+            return av;
         }
 
         public static void update()
