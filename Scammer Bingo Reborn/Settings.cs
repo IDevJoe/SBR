@@ -19,7 +19,7 @@ namespace Scammer_Bingo_Reborn
         static string savepath = "config.ini";
 
                                                                   //Default values
-        public static SavedSettings settings = new SavedSettings(false,false, "You have successfully found a scammer!", "Halfway there! You can probably rat out the scammer now.",10,9, new string[] {"Run", "netstat", "Stopped Services", "I can't understand you sir", "eventvwr", "Secure Server", "msconfig", "The scammer knows...", "cmd", "Do One Thing", "Microsoft Certified", "Corrupted Drivers", "tree", "Network Security", "syskey", "Trying to stick to the script", "Fuck off", "hh h", "support.me", "$$$"}, 5, 4, 0.1f, 0.1f, "1.2.0.0");
+        public static SavedSettings settings = new SavedSettings(false,false, "You have successfully found a scammer!", "Halfway there! You can probably rat out the scammer now.",10,9, new string[] {"Run", "netstat", "Stopped Services", "I can't understand you sir", "eventvwr", "Secure Server", "msconfig", "The scammer knows...", "cmd", "Do One Thing", "Microsoft Certified", "Corrupted Drivers", "tree", "Network Security", "syskey", "Trying to stick to the script", "Fuck off", "hh h", "support.me", "$$$"}, 5, 4, 0.1f, 0.1f, "1.2.0.0", true);
 
         public static string[] colors = new string[] { "#006600", "#009900", "#00e600", "#003399", "#0033cc", "#0099ff", "#ff3399", "#ff3300", "#ff5c33", "#ffffff", "#737373", "#000000" };
 
@@ -126,6 +126,7 @@ namespace Scammer_Bingo_Reborn
         private void Settings_Load(object sender, EventArgs e)
         {
             ReadConfig();
+            checkBox3.Checked = settings.cfuos;
             checkBox2.Checked = settings.autoreset;
             checkBox1.Checked = settings.messages;
             if (!settings.messages)
@@ -202,6 +203,7 @@ namespace Scammer_Bingo_Reborn
             public float whitespaceX, whitespaceY;
             public int[] scoreHistory; //May be implemented in the future
             public string cversion;
+            public bool cfuos = true;
 
             public void AddString(string toAdd)
             {
@@ -214,7 +216,7 @@ namespace Scammer_Bingo_Reborn
                 strings = newS;
             }
 
-            public SavedSettings(bool _autoreset,bool _messages, string _twmessage, string _temessage, int _background, int _foreground, string[] _strings,int _sizeX, int _sizeY, float _whitespaceX, float _whitespaceY, string _cversion)
+            public SavedSettings(bool _autoreset,bool _messages, string _twmessage, string _temessage, int _background, int _foreground, string[] _strings,int _sizeX, int _sizeY, float _whitespaceX, float _whitespaceY, string _cversion, bool _cfuos)
             {
                 autoreset = _autoreset;
                 messages = _messages;
@@ -228,6 +230,7 @@ namespace Scammer_Bingo_Reborn
                 whitespaceX = _whitespaceX;
                 whitespaceY = _whitespaceY;
                 cversion = _cversion;
+                cfuos = _cfuos;
             }
         }
 
@@ -324,6 +327,10 @@ namespace Scammer_Bingo_Reborn
             }
             diffSelectedIndex = comboBoxDifficulty.SelectedIndex;
         }
-                
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            settings.cfuos = checkBox3.Checked;
+        }
     } 
 }

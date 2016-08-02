@@ -45,6 +45,7 @@ namespace Scammer_Bingo_Reborn
                 if(res == DialogResult.Yes)
                 {
                     update();
+                    m.Dispose();
                 }
             }
         }

@@ -85,12 +85,6 @@
     <Compile Include="AboutBox1.Designer.cs">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </Compile>
-    <Compile Include="AU.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AU.Designer.cs">
-      <DependentUpon>AU.cs</DependentUpon>
-    </Compile>
     <Compile Include="ButtonTextInput.cs">
       <SubType>Form</SubType>
     </Compile>

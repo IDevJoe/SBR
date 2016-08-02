@@ -50,10 +50,13 @@
             this.button_Add = new System.Windows.Forms.Button();
             this.listBoxStrings = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -119,7 +122,7 @@
             // 
             this.button2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(415, 569);
+            this.button2.Location = new System.Drawing.Point(415, 623);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 2;
@@ -132,7 +135,7 @@
             this.button3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.button3.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(333, 569);
+            this.button3.Location = new System.Drawing.Point(334, 623);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 3;
@@ -144,7 +147,7 @@
             // 
             this.button4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Location = new System.Drawing.Point(252, 569);
+            this.button4.Location = new System.Drawing.Point(253, 623);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 4;
@@ -337,6 +340,27 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Click on a string to change what it says.";
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.checkBox3);
+            this.groupBox5.Location = new System.Drawing.Point(13, 569);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(477, 48);
+            this.groupBox5.TabIndex = 7;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "groupBox5";
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(9, 19);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(163, 17);
+            this.checkBox3.TabIndex = 0;
+            this.checkBox3.Text = "Check for updates on launch";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            // 
             // Settings
             // 
             this.AcceptButton = this.button4;
@@ -344,7 +368,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.CancelButton = this.button3;
-            this.ClientSize = new System.Drawing.Size(505, 602);
+            this.ClientSize = new System.Drawing.Size(505, 658);
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.button4);
@@ -366,6 +391,8 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -394,5 +421,7 @@
         private System.Windows.Forms.Button button_Add;
         private System.Windows.Forms.ComboBox comboBoxDifficulty;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.CheckBox checkBox3;
     }
 }

@@ -28,7 +28,6 @@ namespace Scammer_Bingo_Reborn
             Settings.settings.cversion = "1.2.0.0";
             Settings.SaveConfig();
             if (Directory.Exists("update")) Directory.Delete("update", true);
-            UpdateBackend.checkForUpdates(this);
         }
 
         private void aboutSBRToolStripMenuItem_Click(object sender, EventArgs e)
@@ -50,6 +49,8 @@ namespace Scammer_Bingo_Reborn
             Control[] arr = new Control[this.Controls.Count];
             this.Controls.CopyTo(arr, 0);
             paintControls(arr, fore, back);
+            if(Settings.settings.cfuos)
+            UpdateBackend.checkForUpdates(this);
         }
 
         public static void paintControls(Control[] arr, String fore, String back)
