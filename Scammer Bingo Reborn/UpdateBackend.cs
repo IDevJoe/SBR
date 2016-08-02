@@ -20,11 +20,12 @@ namespace Scammer_Bingo_Reborn
             string ver;
             using (WebResponse resp = r.GetResponse())
             {
-                Stream data = resp.GetResponseStream();
-                
-                using (StreamReader read = new StreamReader(data))
+                using (Stream data = resp.GetResponseStream())
                 {
-                    ver = read.ReadToEnd();
+                    using (StreamReader read = new StreamReader(data))
+                    {
+                        ver = read.ReadToEnd();
+                    }
                 }
             }
 

@@ -264,7 +264,8 @@
             this.comboBoxDifficulty.Items.AddRange(new object[] {
             "Easy (4x3)",
             "Medium (5x4)",
-            "Hard (6x5)"});
+            "Hard (6x5)",
+            "Custom"});
             this.comboBoxDifficulty.Location = new System.Drawing.Point(94, 20);
             this.comboBoxDifficulty.Name = "comboBoxDifficulty";
             this.comboBoxDifficulty.Size = new System.Drawing.Size(121, 21);
