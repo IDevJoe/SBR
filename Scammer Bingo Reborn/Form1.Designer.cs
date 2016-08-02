@@ -44,6 +44,8 @@
             this.partnersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xeliteXirishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.androidScammerBingoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lewissTechToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.youTubeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonReset = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -54,8 +56,8 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.lewissTechToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.youTubeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkForUpdatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -82,7 +84,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem,
             this.githubToolStripMenuItem,
-            this.partnersToolStripMenuItem});
+            this.partnersToolStripMenuItem,
+            this.updatesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(793, 24);
@@ -191,7 +194,7 @@
             this.xeliteXirishToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.androidScammerBingoToolStripMenuItem});
             this.xeliteXirishToolStripMenuItem.Name = "xeliteXirishToolStripMenuItem";
-            this.xeliteXirishToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.xeliteXirishToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.xeliteXirishToolStripMenuItem.Text = "XeliteXirish";
             // 
             // androidScammerBingoToolStripMenuItem
@@ -200,6 +203,21 @@
             this.androidScammerBingoToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
             this.androidScammerBingoToolStripMenuItem.Text = "Android Scammer Bingo";
             this.androidScammerBingoToolStripMenuItem.Click += new System.EventHandler(this.androidScammerBingoToolStripMenuItem_Click);
+            // 
+            // lewissTechToolStripMenuItem
+            // 
+            this.lewissTechToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.youTubeToolStripMenuItem});
+            this.lewissTechToolStripMenuItem.Name = "lewissTechToolStripMenuItem";
+            this.lewissTechToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.lewissTechToolStripMenuItem.Text = "Lewis\'s Tech";
+            // 
+            // youTubeToolStripMenuItem
+            // 
+            this.youTubeToolStripMenuItem.Name = "youTubeToolStripMenuItem";
+            this.youTubeToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.youTubeToolStripMenuItem.Text = "YouTube";
+            this.youTubeToolStripMenuItem.Click += new System.EventHandler(this.youTubeToolStripMenuItem_Click);
             // 
             // buttonReset
             // 
@@ -318,20 +336,20 @@
             this.linkLabel2.VisitedLinkColor = System.Drawing.Color.Silver;
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
-            // lewissTechToolStripMenuItem
+            // updatesToolStripMenuItem
             // 
-            this.lewissTechToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.youTubeToolStripMenuItem});
-            this.lewissTechToolStripMenuItem.Name = "lewissTechToolStripMenuItem";
-            this.lewissTechToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.lewissTechToolStripMenuItem.Text = "Lewis\'s Tech";
+            this.updatesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.checkForUpdatesToolStripMenuItem});
+            this.updatesToolStripMenuItem.Name = "updatesToolStripMenuItem";
+            this.updatesToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.updatesToolStripMenuItem.Text = "Updates";
             // 
-            // youTubeToolStripMenuItem
+            // checkForUpdatesToolStripMenuItem
             // 
-            this.youTubeToolStripMenuItem.Name = "youTubeToolStripMenuItem";
-            this.youTubeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.youTubeToolStripMenuItem.Text = "YouTube";
-            this.youTubeToolStripMenuItem.Click += new System.EventHandler(this.youTubeToolStripMenuItem_Click);
+            this.checkForUpdatesToolStripMenuItem.Name = "checkForUpdatesToolStripMenuItem";
+            this.checkForUpdatesToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.checkForUpdatesToolStripMenuItem.Text = "Check for updates";
+            this.checkForUpdatesToolStripMenuItem.Click += new System.EventHandler(this.checkForUpdatesToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -397,6 +415,8 @@
         private System.Windows.Forms.ToolStripMenuItem androidScammerBingoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lewissTechToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem youTubeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updatesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem checkForUpdatesToolStripMenuItem;
     }
 }
 

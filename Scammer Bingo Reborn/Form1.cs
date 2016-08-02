@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Scammer_Bingo_Reborn
 {
@@ -24,6 +25,9 @@ namespace Scammer_Bingo_Reborn
         {
             InitializeComponent();
             defaultForm = this;
+            Settings.settings.cversion = "1.2.0.0";
+            Settings.SaveConfig();
+            if (File.Exists("update")) { File.Delete("update");  }
         }
 
         private void aboutSBRToolStripMenuItem_Click(object sender, EventArgs e)
@@ -246,6 +250,11 @@ namespace Scammer_Bingo_Reborn
         private void youTubeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://www.youtube.com/user/LewissTech");
+        }
+
+        private void checkForUpdatesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UpdateBackend.checkForUpdates(this);
         }
     }
 }
