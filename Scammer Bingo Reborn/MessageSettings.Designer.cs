@@ -108,10 +108,9 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(475, 233);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(475, 233);
             this.Name = "MessageSettings";
             this.ShowIcon = false;
             this.Text = "Message Configuration";

@@ -35,6 +35,8 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.contactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutSBRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkForUpdatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.githubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contributeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contributorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,8 +48,6 @@
             this.androidScammerBingoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lewissTechToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.youTubeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.checkForUpdatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonReset = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -107,28 +107,44 @@
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.settingsToolStripMenuItem.Text = "Settings";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(127, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
             // 
             // contactToolStripMenuItem
             // 
             this.contactToolStripMenuItem.Name = "contactToolStripMenuItem";
-            this.contactToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.contactToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.contactToolStripMenuItem.Text = "Contact";
             this.contactToolStripMenuItem.Click += new System.EventHandler(this.contactToolStripMenuItem_Click);
             // 
             // aboutSBRToolStripMenuItem
             // 
             this.aboutSBRToolStripMenuItem.Name = "aboutSBRToolStripMenuItem";
-            this.aboutSBRToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.aboutSBRToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.aboutSBRToolStripMenuItem.Text = "About SBR";
             this.aboutSBRToolStripMenuItem.Click += new System.EventHandler(this.aboutSBRToolStripMenuItem_Click);
+            // 
+            // updatesToolStripMenuItem
+            // 
+            this.updatesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.checkForUpdatesToolStripMenuItem});
+            this.updatesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.updatesToolStripMenuItem.Name = "updatesToolStripMenuItem";
+            this.updatesToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.updatesToolStripMenuItem.Text = "Updates";
+            // 
+            // checkForUpdatesToolStripMenuItem
+            // 
+            this.checkForUpdatesToolStripMenuItem.Name = "checkForUpdatesToolStripMenuItem";
+            this.checkForUpdatesToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.checkForUpdatesToolStripMenuItem.Text = "Check for updates";
+            this.checkForUpdatesToolStripMenuItem.Click += new System.EventHandler(this.checkForUpdatesToolStripMenuItem_Click);
             // 
             // githubToolStripMenuItem
             // 
@@ -194,7 +210,7 @@
             this.xeliteXirishToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.androidScammerBingoToolStripMenuItem});
             this.xeliteXirishToolStripMenuItem.Name = "xeliteXirishToolStripMenuItem";
-            this.xeliteXirishToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.xeliteXirishToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.xeliteXirishToolStripMenuItem.Text = "XeliteXirish";
             // 
             // androidScammerBingoToolStripMenuItem
@@ -209,7 +225,7 @@
             this.lewissTechToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.youTubeToolStripMenuItem});
             this.lewissTechToolStripMenuItem.Name = "lewissTechToolStripMenuItem";
-            this.lewissTechToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.lewissTechToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.lewissTechToolStripMenuItem.Text = "Lewis\'s Tech";
             // 
             // youTubeToolStripMenuItem
@@ -218,22 +234,6 @@
             this.youTubeToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.youTubeToolStripMenuItem.Text = "YouTube";
             this.youTubeToolStripMenuItem.Click += new System.EventHandler(this.youTubeToolStripMenuItem_Click);
-            // 
-            // updatesToolStripMenuItem
-            // 
-            this.updatesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.checkForUpdatesToolStripMenuItem});
-            this.updatesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.updatesToolStripMenuItem.Name = "updatesToolStripMenuItem";
-            this.updatesToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
-            this.updatesToolStripMenuItem.Text = "Updates";
-            // 
-            // checkForUpdatesToolStripMenuItem
-            // 
-            this.checkForUpdatesToolStripMenuItem.Name = "checkForUpdatesToolStripMenuItem";
-            this.checkForUpdatesToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
-            this.checkForUpdatesToolStripMenuItem.Text = "Check for updates";
-            this.checkForUpdatesToolStripMenuItem.Click += new System.EventHandler(this.checkForUpdatesToolStripMenuItem_Click);
             // 
             // buttonReset
             // 
@@ -365,10 +365,9 @@
             this.Controls.Add(this.groupBox_BingoBoard);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(809, 451);
-            this.MinimumSize = new System.Drawing.Size(809, 451);
             this.Name = "Form1";
             this.ShowIcon = false;
             this.Text = "Scammer Bingo Reborn (Community)";
