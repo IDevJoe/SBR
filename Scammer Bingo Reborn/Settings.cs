@@ -268,7 +268,7 @@ namespace Scammer_Bingo_Reborn
             }
             else
             {
-                MessageBox.Show("ERROR, you can't remove anyomore buttons to play with the current difficulty setting!!!");
+                MessageBox.Show(null, "You can't remove anymore buttons due to the set difficulty.", "Rejected!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
