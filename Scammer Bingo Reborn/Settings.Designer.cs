@@ -175,9 +175,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 80);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(289, 13);
+            this.label3.Size = new System.Drawing.Size(295, 13);
             this.label3.TabIndex = 4;
-            this.label3.Text = "You\'ll need to restart the application to apply theme settings.";
+            this.label3.Text = "Theme settings will be applied when clicking \"Apply\" or \"OK\"";
             // 
             // comboBox2
             // 
@@ -348,7 +348,7 @@
             this.groupBox5.Size = new System.Drawing.Size(477, 48);
             this.groupBox5.TabIndex = 7;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "groupBox5";
+            this.groupBox5.Text = "Updates";
             // 
             // checkBox3
             // 

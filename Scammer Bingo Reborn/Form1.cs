@@ -221,7 +221,7 @@ namespace Scammer_Bingo_Reborn
 
         private void reportAnIssueToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/JoeTheHuman/Scammer-Bingo-Reborn/issues/new");
+            System.Diagnostics.Process.Start("http://support.hexxiumcreations.com");
         }
 
         private void contactToolStripMenuItem_Click(object sender, EventArgs e)
