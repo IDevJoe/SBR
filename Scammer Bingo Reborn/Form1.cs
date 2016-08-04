@@ -70,6 +70,11 @@ namespace Scammer_Bingo_Reborn
                     else {
                         arr[i].ForeColor = ColorTranslator.FromHtml(fore);
                         arr[i].BackColor = ColorTranslator.FromHtml(back);
+                        if(arr[i] is LinkLabel)
+                        {
+                            LinkLabel b = (LinkLabel)arr[i];
+                            b.LinkColor = ColorTranslator.FromHtml(fore);
+                        }
                     }
                 }
             }
