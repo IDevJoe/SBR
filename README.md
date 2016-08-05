@@ -1,4 +1,5 @@
 ![Screensot](ScammerBingo128.png)
+
 New logo by Newtsrock
 
 # Scammer Bingo Reborn
