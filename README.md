@@ -1,3 +1,7 @@
+![Screensot](ScammerBingo128.png)
+
+New logo by Newtsrock
+
 # Scammer Bingo Reborn
 
 This is the community version of Jim Browning's Scammer Bingo.
