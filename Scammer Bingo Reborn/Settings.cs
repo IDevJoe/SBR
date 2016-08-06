@@ -169,6 +169,8 @@ namespace Scammer_Bingo_Reborn
             Form1.defaultForm.ResetScoreAndButtons();
             ButtonTextInput inp = new ButtonTextInput(listBoxStrings.SelectedIndex, listBoxStrings);
             inp.ShowDialog();
+            button_Remove.Enabled = false;
+            button_Edit.Enabled = false;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -245,7 +247,8 @@ namespace Scammer_Bingo_Reborn
             tsarray[l0] = "<new>";
             UpdateList(listBoxStrings);
             listBoxStrings.SelectedItem = tsarray[l0];
-
+            button_Remove.Enabled = false;
+            button_Edit.Enabled = false;
             button_Edit_Click(sender, e);
         }
 
@@ -264,7 +267,9 @@ namespace Scammer_Bingo_Reborn
                     c++;
                 }
                 settings.strings = tsarray;
-                UpdateList(listBoxStrings); 
+                UpdateList(listBoxStrings);
+                button_Remove.Enabled = false;
+                button_Edit.Enabled = false;
             }
             else
             {
@@ -274,7 +279,7 @@ namespace Scammer_Bingo_Reborn
 
         private void listBoxStrings_SelectedIndexChanged(object sender, EventArgs e)
         {
-            button_Edit.Enabled = true;
+            button_Edit.Enabled = false;
             button_Remove.Enabled = true;
         }
 

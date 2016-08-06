@@ -289,11 +289,11 @@
             this.button_Edit.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.button_Edit.Enabled = false;
             this.button_Edit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button_Edit.Location = new System.Drawing.Point(387, 287);
+            this.button_Edit.Location = new System.Drawing.Point(339, 287);
             this.button_Edit.Name = "button_Edit";
-            this.button_Edit.Size = new System.Drawing.Size(75, 23);
+            this.button_Edit.Size = new System.Drawing.Size(123, 23);
             this.button_Edit.TabIndex = 9;
-            this.button_Edit.Text = "Edit";
+            this.button_Edit.Text = "Edit (A bit broken)";
             this.button_Edit.UseVisualStyleBackColor = false;
             this.button_Edit.Click += new System.EventHandler(this.button_Edit_Click);
             // 
