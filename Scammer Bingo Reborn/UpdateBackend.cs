@@ -15,7 +15,7 @@ namespace Scammer_Bingo_Reborn
 
         public static object[] updateAvail()
         {
-            HttpWebRequest r = WebRequest.CreateHttp("http://hexxiumcreations.com/community/ver.txt");
+            HttpWebRequest r = WebRequest.CreateHttp("http://joethehuman.github.io/projectUpdates/sbr/ver.txt");
             r.UserAgent = "Scammer Bingo Auto-Update";
             string ver;
             using (WebResponse resp = r.GetResponse())
@@ -54,7 +54,7 @@ namespace Scammer_Bingo_Reborn
         public static void update()
         {
             WebClient l = new WebClient();
-            l.DownloadFile("https://www.hexxiumcreations.com/community/latestVersion.zip", "latestVersion.zip");
+            l.DownloadFile("http://joethehuman.github.io/projectUpdates/sbr/lastestVersion.txt", "latestVersion.zip");
             
             ZipFile.ExtractToDirectory("latestVersion.zip", "update");
             File.Delete("update.zip");
