@@ -78,8 +78,7 @@ namespace Scammer_Bingo_Reborn
                 DialogResult res = MessageBox.Show(null, "An update is available!\nInstalled version: " + current + "\nLatest version: " + latest + "\n\nWould you like to install this update now?", "Update available ("+((string)response[3])+" server)", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if(res == DialogResult.Yes)
                 {
-                    update((int)response[4]);
-                    m.Dispose();
+                    update(0);
                 }
             }
             return av;
@@ -92,13 +91,15 @@ namespace Scammer_Bingo_Reborn
                 try
                 {
                     WebClient l = new WebClient();
-                    l.DownloadFile("http://www.hexxiumcreations.com/community/lastestVersion.txt", "latestVersion.zip");
+                    l.DownloadFile("https://www.hexxiumcreations.com/community/latestVersion.zip", "latestVersion.zip");
 
                     ZipFile.ExtractToDirectory("latestVersion.zip", "update");
                     File.Delete("update.zip");
+                    Console.WriteLine("Starting...");
                     System.Diagnostics.Process.Start("update\\setup.exe");
                 } catch(Exception e)
                 {
+                    Console.WriteLine(e.StackTrace);
                     update(1);
                 }
             } else
@@ -106,7 +107,7 @@ namespace Scammer_Bingo_Reborn
                 try
                 {
                     WebClient l = new WebClient();
-                    l.DownloadFile("http://joethehuman.github.io/projectupdates/sbr/lastestVersion.txt", "latestVersion.zip");
+                    l.DownloadFile("https://joethehuman.github.io/projectupdates/sbr/lastestVersion.txt", "latestVersion.zip");
 
                     ZipFile.ExtractToDirectory("latestVersion.zip", "update");
                     File.Delete("update.zip");
