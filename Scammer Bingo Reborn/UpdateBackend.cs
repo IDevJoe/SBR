@@ -35,7 +35,7 @@ namespace Scammer_Bingo_Reborn
                         }
                     }
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     return updateAvail(1);
                 }
@@ -57,7 +57,7 @@ namespace Scammer_Bingo_Reborn
                         }
                     }
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     return new object[] { (false), Settings.settings.cversion, Settings.settings.cversion };
                 }
@@ -113,7 +113,7 @@ namespace Scammer_Bingo_Reborn
                     File.Delete("update.zip");
                     System.Diagnostics.Process.Start("update\\setup.exe");
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                 }
             }

@@ -293,7 +293,7 @@
             this.button_Edit.Name = "button_Edit";
             this.button_Edit.Size = new System.Drawing.Size(123, 23);
             this.button_Edit.TabIndex = 9;
-            this.button_Edit.Text = "Edit (A bit broken)";
+            this.button_Edit.Text = "Edit";
             this.button_Edit.UseVisualStyleBackColor = false;
             this.button_Edit.Click += new System.EventHandler(this.button_Edit_Click);
             // 

@@ -218,6 +218,26 @@ namespace Scammer_Bingo_Reborn
                 strings = newS;
             }
 
+            public void RemoveString(int index)
+            {
+                int l0 = settings.strings.Length;
+                string[] tsarray = new string[l0 - 1];
+                for (int i = 0, c = 0; i < l0; i++)
+                {
+                    if (i == index)
+                        continue;
+
+                    tsarray[c] = settings.strings[i];
+                    c++;
+                }
+                settings.strings = tsarray;
+            }
+
+            internal void EditString(int i, string str)
+            {
+                strings[i] = str;
+            }
+
             public SavedSettings(bool _autoreset,bool _messages, string _twmessage, string _temessage, int _background, int _foreground, string[] _strings,int _sizeX, int _sizeY, float _whitespaceX, float _whitespaceY, string _cversion, bool _cfuos)
             {
                 autoreset = _autoreset;
@@ -238,35 +258,19 @@ namespace Scammer_Bingo_Reborn
 
         private void button_Add_Click(object sender, EventArgs e)
         {
-            int l0 = settings.strings.Length;
-            string[] tsarray = new string[l0 + 1];
-            for (int i = 0; i < l0; i++)
-            {
-                tsarray[i] = settings.strings[i];
-            }
-            tsarray[l0] = "<new>";
-            UpdateList(listBoxStrings);
-            listBoxStrings.SelectedItem = tsarray[l0];
+            Form1.defaultForm.ResetScoreAndButtons();
+            ButtonTextInput inp = new ButtonTextInput(-1, listBoxStrings);
+            inp.ShowDialog();
             button_Remove.Enabled = false;
             button_Edit.Enabled = false;
-            button_Edit_Click(sender, e);
         }
 
         private void button_Remove_Click(object sender, EventArgs e)
         {
             if (settings.strings.Length > settings.sizeX * settings.sizeY)
             {
-                int l0 = settings.strings.Length;
-                string[] tsarray = new string[l0 - 1];
-                for (int i = 0, c = 0; i < l0; i++)
-                {
-                    if (i == listBoxStrings.SelectedIndex)
-                        continue;
-
-                    tsarray[c] = settings.strings[i];
-                    c++;
-                }
-                settings.strings = tsarray;
+                settings.RemoveString(listBoxStrings.SelectedIndex);
+                SaveConfig();
                 UpdateList(listBoxStrings);
                 button_Remove.Enabled = false;
                 button_Edit.Enabled = false;
@@ -279,7 +283,7 @@ namespace Scammer_Bingo_Reborn
 
         private void listBoxStrings_SelectedIndexChanged(object sender, EventArgs e)
         {
-            button_Edit.Enabled = false;
+            button_Edit.Enabled = true;
             button_Remove.Enabled = true;
         }
 

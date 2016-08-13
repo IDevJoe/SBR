@@ -14,7 +14,7 @@ namespace Scammer_Bingo_Reborn
     {
         
         public ListBox caller;
-        public int actual = -1;
+        public int actual = -2;
 
         public ButtonTextInput(int _actual, ListBox _caller)
         {
@@ -26,7 +26,15 @@ namespace Scammer_Bingo_Reborn
         private void button1_Click(object sender, EventArgs e)
         {
             string t = textBox1.Text;
-            Settings.settings.AddString(t);
+            if(actual == -1)
+            {
+                Settings.settings.AddString(t);
+            }
+            else if (actual >= 0)
+            {
+                Settings.settings.EditString(actual, t);
+            }
+            
             Settings.SaveConfig();
             Settings.UpdateList(caller);
             Form1.defaultForm.PrepareButtons(Settings.settings.strings);
