@@ -6,13 +6,13 @@ New logo by Newtsrock
 
 ![Build Status](https://travis-ci.org/JoeTheHuman/Scammer-Bingo-Reborn.svg?branch=master)
 
+[Travis CI](https://travis-ci.org/JoeTheHuman/Scammer-Bingo-Reborn)
+
 This is the community version of Jim Browning's Scammer Bingo.
 
 
 ![Screenshot](screenshot.png)
 ![Screenshot](screenshot2.png)
-
-[Travis CI](https://travis-ci.org/JoeTheHuman/Scammer-Bingo-Reborn)
 
 # How to contribute
 
