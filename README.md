@@ -1,8 +1,10 @@
-![Screensot](ScammerBingo128.png)
+![Logo](ScammerBingo128.png)
 
 New logo by Newtsrock
 
 # Scammer Bingo Reborn
+
+![Build Status](https://travis-ci.org/JoeTheHuman/Scammer-Bingo-Reborn.svg?branch=master)
 
 This is the community version of Jim Browning's Scammer Bingo.
 
