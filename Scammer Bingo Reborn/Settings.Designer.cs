@@ -52,6 +52,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.button_Default = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -361,6 +362,18 @@
             this.checkBox3.UseVisualStyleBackColor = true;
             this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
+            // button_Default
+            // 
+            this.button_Default.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button_Default.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button_Default.Location = new System.Drawing.Point(12, 623);
+            this.button_Default.Name = "button_Default";
+            this.button_Default.Size = new System.Drawing.Size(75, 23);
+            this.button_Default.TabIndex = 8;
+            this.button_Default.Text = "Default";
+            this.button_Default.UseVisualStyleBackColor = false;
+            this.button_Default.Click += new System.EventHandler(this.button_Default_Click);
+            // 
             // Settings
             // 
             this.AcceptButton = this.button4;
@@ -369,6 +382,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.CancelButton = this.button3;
             this.ClientSize = new System.Drawing.Size(505, 658);
+            this.Controls.Add(this.button_Default);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -424,5 +438,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.Button button_Default;
     }
 }

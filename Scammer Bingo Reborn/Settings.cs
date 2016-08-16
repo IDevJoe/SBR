@@ -6,10 +6,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows.Forms;
 using System.IO;
-using System.Runtime.Serialization;
-using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Scammer_Bingo_Reborn
 {
@@ -340,6 +339,21 @@ namespace Scammer_Bingo_Reborn
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
             settings.cfuos = checkBox3.Checked;
+        }
+
+        private void button_Default_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Do you want to reset all of the settings to default?(requires restart)", "Reset to default", MessageBoxButtons.OKCancel);
+            if(result == DialogResult.OK)
+            {
+                if(File.Exists(GetSavePath()))
+                {
+                    File.Delete(GetSavePath());
+                }
+                Process.Start(Process.GetCurrentProcess().MainModule.FileName);
+                Process.GetCurrentProcess().Kill();
+
+            }
         }
     } 
 }
