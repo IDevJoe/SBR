@@ -4,7 +4,7 @@ New logo by Newtsrock
 
 # Scammer Bingo Reborn
 
-[![Build Status](https://travis-ci.org/JoeTheHuman/Scammer-Bingo-Reborn.svg?branch=master)](https://travis-ci.org/JoeTheHuman/Scammer-Bingo-Reborn) ![Total Downloads](https://img.shields.io/github/downloads/JoeTheHuman/Scammer-Bingo-Reborn/total.svg) ![Version](https://img.shields.io/badge/Version-1.3.0.0-brightgreen.svg)
+[![Build Status](https://travis-ci.org/JoeTheHuman/Scammer-Bingo-Reborn.svg?branch=master)](https://travis-ci.org/JoeTheHuman/Scammer-Bingo-Reborn) ![Total Downloads](https://img.shields.io/github/downloads/JoeTheHuman/Scammer-Bingo-Reborn/total.svg?style=flat) ![Version](https://img.shields.io/badge/Version-1.3.0.0-brightgreen.svg?style=flat)
 
 This is the community version of Jim Browning's Scammer Bingo.
 
