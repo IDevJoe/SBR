@@ -58,6 +58,8 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.discordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -85,6 +87,7 @@
             this.aboutToolStripMenuItem,
             this.updatesToolStripMenuItem,
             this.githubToolStripMenuItem,
+            this.discordToolStripMenuItem,
             this.partnersToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -107,26 +110,26 @@
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.settingsToolStripMenuItem.Text = "Settings";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(127, 6);
             // 
             // contactToolStripMenuItem
             // 
             this.contactToolStripMenuItem.Name = "contactToolStripMenuItem";
-            this.contactToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.contactToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.contactToolStripMenuItem.Text = "Contact";
             this.contactToolStripMenuItem.Click += new System.EventHandler(this.contactToolStripMenuItem_Click);
             // 
             // aboutSBRToolStripMenuItem
             // 
             this.aboutSBRToolStripMenuItem.Name = "aboutSBRToolStripMenuItem";
-            this.aboutSBRToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutSBRToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.aboutSBRToolStripMenuItem.Text = "About SBR";
             this.aboutSBRToolStripMenuItem.Click += new System.EventHandler(this.aboutSBRToolStripMenuItem_Click);
             // 
@@ -352,6 +355,21 @@
             this.linkLabel2.VisitedLinkColor = System.Drawing.Color.Silver;
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
+            // discordToolStripMenuItem
+            // 
+            this.discordToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.manageToolStripMenuItem});
+            this.discordToolStripMenuItem.Name = "discordToolStripMenuItem";
+            this.discordToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.discordToolStripMenuItem.Text = "Discord";
+            // 
+            // manageToolStripMenuItem
+            // 
+            this.manageToolStripMenuItem.Name = "manageToolStripMenuItem";
+            this.manageToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.manageToolStripMenuItem.Text = "Manage";
+            this.manageToolStripMenuItem.Click += new System.EventHandler(this.manageToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -417,6 +435,8 @@
         private System.Windows.Forms.ToolStripMenuItem youTubeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updatesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem checkForUpdatesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem discordToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manageToolStripMenuItem;
     }
 }
 

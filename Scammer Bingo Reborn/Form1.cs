@@ -267,5 +267,10 @@ namespace Scammer_Bingo_Reborn
                 MessageBox.Show(null, "You're already on the latest update!", "No update available", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void manageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new ManageDiscordSettings().ShowDialog();
+        }
     }
 }
