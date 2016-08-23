@@ -246,7 +246,7 @@ namespace Scammer_Bingo_Reborn
 
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new Settings().ShowDialog();
+            using (Settings g = new Settings()) g.ShowDialog();
         }
 
         private void androidScammerBingoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -270,7 +270,7 @@ namespace Scammer_Bingo_Reborn
 
         private void manageToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new ManageDiscordSettings().ShowDialog();
+            using(ManageDiscordSettings s = new ManageDiscordSettings()) s.ShowDialog();
         }
     }
 }

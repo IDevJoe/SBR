@@ -19,7 +19,19 @@ namespace Scammer_Bingo_Reborn
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new DiscordTokenIn().ShowDialog();
+            new DiscordTokenIn(this).ShowDialog();
+        }
+
+        private void ManageDiscordSettings_Load(object sender, EventArgs e)
+        {
+            string token = Settings.settings.discord_token;
+            if(string.IsNullOrWhiteSpace(token))
+            {
+                label2.Text = "N/A";
+            } else
+            {
+                label2.Text = token;
+            }
         }
     }
 }
