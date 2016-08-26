@@ -202,6 +202,7 @@
             // 
             this.discordToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.manageToolStripMenuItem});
+            this.discordToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.discordToolStripMenuItem.Name = "discordToolStripMenuItem";
             this.discordToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.discordToolStripMenuItem.Text = "Discord";
@@ -209,7 +210,7 @@
             // manageToolStripMenuItem
             // 
             this.manageToolStripMenuItem.Name = "manageToolStripMenuItem";
-            this.manageToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.manageToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.manageToolStripMenuItem.Text = "Manage";
             this.manageToolStripMenuItem.Click += new System.EventHandler(this.manageToolStripMenuItem_Click);
             // 

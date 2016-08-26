@@ -87,7 +87,7 @@ namespace Scammer_Bingo_Reborn
 
         private void BingoButton_Click(object sender, EventArgs e)
         {
-            buttonClick(sender);
+            buttonClick(sender, false);
         }
 
         //Initialize and set button names 
@@ -177,9 +177,9 @@ namespace Scammer_Bingo_Reborn
             }
         }
 
-        private void buttonClick(object sender)
+        public void buttonClick(object sender, bool l)
         {
-            if(BotBackend.last != null && BotBackend.last.connected)
+            if (BotBackend.last != null && BotBackend.last.connected && !l)
             {
                 MessageBox.Show("This option is not available right now as Discord is controlling the board.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;

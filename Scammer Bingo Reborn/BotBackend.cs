@@ -19,6 +19,7 @@ namespace Scammer_Bingo_Reborn
         public string token;
         public bool connected = false;
         delegate void setDisabledCallback(Control l);
+        delegate void resetBoardCallback();
 
         public BotBackend(DiscordClient _c, string token)
         {
@@ -49,11 +50,36 @@ namespace Scammer_Bingo_Reborn
                 } else if(act.ToLower() == "board")
                 {
                     commandBoard(args, e.User, e.Channel);
+                } else if(act.ToLower() == "reset")
+                {
+                    commandReset(args, e.User, e.Channel);
+                } else if(act.ToLower() == "help")
+                {
+                    commandHelp(args, e.User, e.Channel);
                 }
                 else
                 {
                     e.Channel.SendMessage("Unknown command.");
                 }
+            }
+        }
+
+        private void commandHelp(string[] args, User u, Channel c)
+        {
+            c.SendMessage("```>help - this...\n>board - Shows the board\n>play - Makes a play on the board\n>reset - Resets the board```");
+        }
+
+        private void commandReset(string[] args, User u, Channel c)
+        {
+            if (args.Length == 0)
+            {
+                resetBoard();
+                c.SendMessage("```" + genBoard() + "```");
+                c.SendMessage("The board was reset.");
+            }
+            else
+            {
+                c.SendMessage("Syntax: `>reset`");
             }
         }
 
@@ -74,6 +100,12 @@ namespace Scammer_Bingo_Reborn
                     c.SendMessage("Enter a valid box number.");
                     return;
                 }
+                if(!g.Enabled)
+                {
+                    c.SendMessage("```" + genBoard() + "```");
+                    c.SendMessage("`" + g.Text + "` was already played. Your play has no effect on the board.");
+                    return;
+                }
                 setDisabled(g);
                 c.SendMessage("```" + genBoard() + "```");
                 c.SendMessage("Played `" + g.Text + "` successfully. The board has been updated.");
@@ -85,13 +117,25 @@ namespace Scammer_Bingo_Reborn
 
         private void setDisabled(Control l)
         {
-            if(l.InvokeRequired)
+            if(Form1.defaultForm.InvokeRequired)
             {
                 setDisabledCallback d = new setDisabledCallback(setDisabled);
                 Form1.defaultForm.Invoke(d, new object[] { l });
             } else
             {
-                l.Enabled = false;
+                Form1.defaultForm.buttonClick(l, true);
+            }
+        }
+
+        private void resetBoard()
+        {
+            if(Form1.defaultForm.InvokeRequired)
+            {
+                resetBoardCallback g = new resetBoardCallback(resetBoard);
+                Form1.defaultForm.Invoke(g, new object[] { });
+            } else
+            {
+                Form1.defaultForm.ResetScoreAndButtons();
             }
         }
 
@@ -201,6 +245,7 @@ namespace Scammer_Bingo_Reborn
                     all += " | " + (i + 1) + " = " + ctrls[i].Text;
                 }
             }
+            all += "\n\nScore: " + Form1.defaultForm.label3.Text;
             return all;
         }
 
