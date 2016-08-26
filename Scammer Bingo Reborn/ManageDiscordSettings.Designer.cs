@@ -130,6 +130,7 @@
             this.checkBox2.TabIndex = 1;
             this.checkBox2.Text = "Restrict bingo to PMs";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // checkBox1
             // 
@@ -140,6 +141,7 @@
             this.checkBox1.TabIndex = 0;
             this.checkBox1.Text = "Accept all friend requests (Useful for Discord groups)";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // groupBox3
             // 
@@ -164,6 +166,7 @@
             this.checkBox3.TabIndex = 4;
             this.checkBox3.Text = "Connect";
             this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
             // label7
             // 

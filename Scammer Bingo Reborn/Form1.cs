@@ -179,6 +179,11 @@ namespace Scammer_Bingo_Reborn
 
         private void buttonClick(object sender)
         {
+            if(BotBackend.last != null && BotBackend.last.connected)
+            {
+                MessageBox.Show("This option is not available right now as Discord is controlling the board.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             score++;
             string newScore = score + "/" + btns.Length;
             label3.Text = newScore;
