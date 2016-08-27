@@ -135,7 +135,7 @@ namespace Scammer_Bingo_Reborn
                 Form1.defaultForm.Invoke(g, new object[] { });
             } else
             {
-                Form1.defaultForm.ResetScoreAndButtons();
+                Form1.defaultForm.ResetScoreAndButtons(true);
             }
         }
 

@@ -102,14 +102,14 @@ namespace Scammer_Bingo_Reborn
         private void button4_Click(object sender, EventArgs e)
         {
             SaveConfig();
-            Form1.defaultForm.ResetScoreAndButtons();
+            Form1.defaultForm.ResetScoreAndButtons(true);
             this.Dispose();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             SaveConfig();
-            Form1.defaultForm.ResetScoreAndButtons();
+            Form1.defaultForm.ResetScoreAndButtons(true);
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -165,7 +165,7 @@ namespace Scammer_Bingo_Reborn
 
         private void button_Edit_Click(object sender, EventArgs e)
         {
-            Form1.defaultForm.ResetScoreAndButtons();
+            Form1.defaultForm.ResetScoreAndButtons(true);
             ButtonTextInput inp = new ButtonTextInput(listBoxStrings.SelectedIndex, listBoxStrings);
             inp.ShowDialog();
             button_Remove.Enabled = false;
@@ -263,7 +263,7 @@ namespace Scammer_Bingo_Reborn
 
         private void button_Add_Click(object sender, EventArgs e)
         {
-            Form1.defaultForm.ResetScoreAndButtons();
+            Form1.defaultForm.ResetScoreAndButtons(true);
             ButtonTextInput inp = new ButtonTextInput(-1, listBoxStrings);
             inp.ShowDialog();
             button_Remove.Enabled = false;
