@@ -226,6 +226,12 @@
     <Content Include="icon1.ico" />
     <Content Include="res\icon1.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DiscordAuthLinkGen\DiscordAuthLinkGen.csproj">
+      <Project>{f672f010-d261-4ea9-b72d-d8d8ba1da12e}</Project>
+      <Name>DiscordAuthLinkGen</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
