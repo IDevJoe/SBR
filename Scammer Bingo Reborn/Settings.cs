@@ -17,8 +17,7 @@ namespace Scammer_Bingo_Reborn
     {
         static string savepath = "config.xml";
 
-        //Default values
-        public static SavedSettings settings = new SavedSettings(false, false, "You have successfully found a scammer!", "Halfway there! You can probably rat out the scammer now.", 10, 9, new string[] { "Run", "netstat", "Stopped Services", "I can't understand you sir", "eventvwr", "Secure Server", "msconfig", "The scammer knows...", "cmd", "Do One Thing", "Microsoft Certified", "Corrupted Drivers", "tree", "Network Security", "syskey", "Trying to stick to the script", "Fuck off", "hh h", "support.me", "$$$" }, 5, 4, 0.1f, 0.1f, "1.4.0.1", true, "", false, true);
+        public static SavedSettings settings = new SavedSettings();
 
         public static string[] colors = new string[] { "#006600", "#009900", "#00e600", "#003399", "#0033cc", "#0099ff", "#ff3399", "#ff3300", "#ff5c33", "#ffffff", "#737373", "#000000" };
 
@@ -199,18 +198,18 @@ namespace Scammer_Bingo_Reborn
         [Serializable]
         public class SavedSettings
         {
-            public bool autoreset, messages;
-            public string twmessage, temessage;
-            public int global_background, global_foreground;
-            public string[] strings;
-            public int sizeX, sizeY;
-            public float whitespaceX, whitespaceY;
+            public bool autoreset = false, messages = false;
+            public string twmessage = "You have successfully found a scammer!", temessage = "Halfway there! You can probably rat out the scammer now.";
+            public int global_background = 10, global_foreground = 9;
+            public string[] strings = new string[] { "Run", "netstat", "Stopped Services", "I can't understand you sir", "eventvwr", "Secure Server", "msconfig", "The scammer knows...", "cmd", "Do One Thing", "Microsoft Certified", "Corrupted Drivers", "tree", "Network Security", "syskey", "Trying to stick to the script", "Fuck off", "hh h", "support.me", "$$$" };
+            public int sizeX = 5, sizeY = 4;
+            public float whitespaceX = 0.1f, whitespaceY = 0.1f;
             public int[] scoreHistory; //May be implemented in the future
-            public string cversion;
+            public string cversion = "1.4.0.1";
             public bool cfuos = true;
-            public string discord_token;
-            public bool discord_acceptfr;
-            public bool discord_pmonly;
+            public string discord_token = "";
+            public bool discord_acceptfr = false;
+            public bool discord_pmonly = true;
 
             public void AddString(string toAdd)
             {
@@ -242,27 +241,6 @@ namespace Scammer_Bingo_Reborn
             {
                 strings[i] = str;
             }
-
-            public SavedSettings(bool _autoreset,bool _messages, string _twmessage, string _temessage, int _background, int _foreground, string[] _strings,int _sizeX, int _sizeY, float _whitespaceX, float _whitespaceY, string _cversion, bool _cfuos, string _token, bool _discordaccfr, bool _discordpmonly)
-            {
-                autoreset = _autoreset;
-                messages = _messages;
-                twmessage = _twmessage;
-                temessage = _temessage;
-                global_background = _background;
-                global_foreground = _foreground;
-                strings = _strings;
-                sizeX = _sizeX;
-                sizeY = _sizeY;
-                whitespaceX = _whitespaceX;
-                whitespaceY = _whitespaceY;
-                cversion = _cversion;
-                cfuos = _cfuos;
-                discord_token = _token;
-                discord_acceptfr = _discordaccfr;
-                discord_pmonly = _discordpmonly;
-            }
-            public SavedSettings(){}
         }
 
         private void button_Add_Click(object sender, EventArgs e)
