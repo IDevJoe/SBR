@@ -60,7 +60,7 @@ namespace Scammer_Bingo_Reborn
         public static void ReadConfig()
         {
             savepath = GetSavePath();
-            if (File.Exists(Path.GetDirectoryName(savepath) + "config.ini"))
+            if (File.Exists(Path.GetDirectoryName(savepath) + @"\config.ini"))
                 FileIO.UpgradeSaveFile(Path.GetDirectoryName(savepath));
 
             if(File.Exists(savepath))
@@ -70,7 +70,7 @@ namespace Scammer_Bingo_Reborn
         private static string GetSavePath()
         {
             string s = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            s += @"\ScammerBingoReborn\config.ini";
+            s += @"\ScammerBingoReborn\config.xml";
             return s;
         }
 
@@ -262,6 +262,7 @@ namespace Scammer_Bingo_Reborn
                 discord_acceptfr = _discordaccfr;
                 discord_pmonly = _discordpmonly;
             }
+            public SavedSettings(){}
         }
 
         private void button_Add_Click(object sender, EventArgs e)

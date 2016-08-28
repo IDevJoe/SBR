@@ -59,22 +59,24 @@ namespace Scammer_Bingo_Reborn
         {
             using (MemoryStream ms = new MemoryStream())
             {
-                using (FileStream fs = File.OpenRead(dir + "config.ini"))
+                using (FileStream fs = File.OpenRead(dir + @"\config.ini"))
                 {
                     var binformatter = new BinaryFormatter();
                     var xmlformatter = new XmlSerializer(typeof(Settings.SavedSettings));
 
-                    xmlformatter.Serialize(ms, (Settings.SavedSettings)binformatter.Deserialize(fs));
+                    var ss = (Settings.SavedSettings)binformatter.Deserialize(fs);
+
+                    xmlformatter.Serialize(ms, ss);
 
                 }
 
-                using (FileStream fs = File.Create(dir + "config.xml"))
+                using (FileStream fs = File.Create(dir + @"\config.xml"))
                 {
                     ms.Position = 0;
                     ms.WriteTo(fs);
                 }
 
-                File.Delete(dir + "config.ini");
+                File.Delete(dir + @"\config.ini");
             }
             
         }
