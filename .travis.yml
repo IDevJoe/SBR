@@ -1,5 +1,5 @@
 language: csharp
 solution: Scammer-Bingo-Reborn.sln
 install:
-  - sudo apt-get install -y gtk-sharp2
+  - apt-get install -y gtk-sharp2
   - nuget restore Scammer-Bingo-Reborn.sln
