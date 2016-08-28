@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Xml.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Runtime.Serialization;
 
 namespace Scammer_Bingo_Reborn
 {
@@ -36,7 +36,7 @@ namespace Scammer_Bingo_Reborn
             if (toSerialize != null)
             {
                 MemoryStream stream = new MemoryStream();
-                IFormatter formatter = new BinaryFormatter();
+                XmlSerializer formatter = new XmlSerializer(toSerialize.GetType());
                 formatter.Serialize(stream, toSerialize);
                 stream.Position = 0;
                 return stream;
@@ -48,12 +48,37 @@ namespace Scammer_Bingo_Reborn
         {
             if (stream.Length > 0)
             {
-                IFormatter formatter = new BinaryFormatter();
-                stream.Seek(0, SeekOrigin.Begin);
-                object o = formatter.Deserialize(stream);
-                return (T)o;
+                XmlSerializer formatter = new XmlSerializer(typeof(T));
+                stream.Position = 0;
+                return (T)formatter.Deserialize(stream); ;
             }
             else return default(T);
+        }
+
+        internal static void UpgradeSaveFile(string dir)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                using (FileStream fs = File.OpenRead(dir + @"\config.ini"))
+                {
+                    var binformatter = new BinaryFormatter();
+                    var xmlformatter = new XmlSerializer(typeof(Settings.SavedSettings));
+
+                    var ss = (Settings.SavedSettings)binformatter.Deserialize(fs);
+
+                    xmlformatter.Serialize(ms, ss);
+
+                }
+
+                using (FileStream fs = File.Create(dir + @"\config.xml"))
+                {
+                    ms.Position = 0;
+                    ms.WriteTo(fs);
+                }
+
+                File.Delete(dir + @"\config.ini");
+            }
+            
         }
     }
 }

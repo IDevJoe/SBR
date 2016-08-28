@@ -15,7 +15,7 @@ namespace Scammer_Bingo_Reborn
     public partial class Settings : Form
 
     {
-        static string savepath = "config.ini";
+        static string savepath = "config.xml";
 
         //Default values
         public static SavedSettings settings = new SavedSettings(false, false, "You have successfully found a scammer!", "Halfway there! You can probably rat out the scammer now.", 10, 9, new string[] { "Run", "netstat", "Stopped Services", "I can't understand you sir", "eventvwr", "Secure Server", "msconfig", "The scammer knows...", "cmd", "Do One Thing", "Microsoft Certified", "Corrupted Drivers", "tree", "Network Security", "syskey", "Trying to stick to the script", "Fuck off", "hh h", "support.me", "$$$" }, 5, 4, 0.1f, 0.1f, "1.4.0.1", true, "", false, true);
@@ -60,6 +60,9 @@ namespace Scammer_Bingo_Reborn
         public static void ReadConfig()
         {
             savepath = GetSavePath();
+            if (File.Exists(Path.GetDirectoryName(savepath) + @"\config.ini"))
+                FileIO.UpgradeSaveFile(Path.GetDirectoryName(savepath));
+
             if(File.Exists(savepath))
             settings = FileIO.LoadFile(savepath);
         }
@@ -67,7 +70,7 @@ namespace Scammer_Bingo_Reborn
         private static string GetSavePath()
         {
             string s = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            s += @"\ScammerBingoReborn\config.ini";
+            s += @"\ScammerBingoReborn\config.xml";
             return s;
         }
 
@@ -259,6 +262,7 @@ namespace Scammer_Bingo_Reborn
                 discord_acceptfr = _discordaccfr;
                 discord_pmonly = _discordpmonly;
             }
+            public SavedSettings(){}
         }
 
         private void button_Add_Click(object sender, EventArgs e)
