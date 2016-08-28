@@ -7,6 +7,8 @@ using System.Net;
 using System.IO;
 using System.IO.Compression;
 using System.Windows.Forms;
+using System.Security.Permissions;
+using System.Diagnostics;
 
 namespace Scammer_Bingo_Reborn
 {
@@ -90,13 +92,7 @@ namespace Scammer_Bingo_Reborn
             {
                 try
                 {
-                    WebClient l = new WebClient();
-                    l.DownloadFile("https://www.hexxiumcreations.com/community/latestVersion.zip", "latestVersion.zip");
-
-                    ZipFile.ExtractToDirectory("latestVersion.zip", "update");
-                    File.Delete("update.zip");
-                    Console.WriteLine("Starting...");
-                    System.Diagnostics.Process.Start("update\\setup.exe");
+                    System.Diagnostics.Process.Start("http://www.hexxiumcreations.com/community/latestVersion.zip");
                 } catch(Exception e)
                 {
                     Console.WriteLine(e.StackTrace);
