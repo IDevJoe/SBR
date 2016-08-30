@@ -36,6 +36,7 @@ namespace Scammer_Bingo_Reborn
                             }
                         }
                     }
+                    ver = RemoveWhitespace(ver);
                 }
                 catch (Exception)
                 {
@@ -46,7 +47,7 @@ namespace Scammer_Bingo_Reborn
                 server = "Backup";
                 try
                 {
-                    HttpWebRequest r = WebRequest.CreateHttp("http://joethehuman.github.io/projectupdates/sbr/ver.txt");
+                    HttpWebRequest r = (HttpWebRequest)WebRequest.Create("https://joethehuman.github.io/projectupdates/sbr/ver.txt");
                     r.UserAgent = "Scammer Bingo Auto-Update";
                     using (WebResponse resp = r.GetResponse())
                     {
@@ -58,11 +59,12 @@ namespace Scammer_Bingo_Reborn
                             }
                         }
                     }
+                    ver = RemoveWhitespace(ver);
                 }
                 catch (Exception)
                 {
                     MessageBox.Show("The update servers are unavailable at this time. No updating is not available.", "Updates", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return new object[] { (false), Settings.settings.cversion, Settings.settings.cversion };
+                    return new object[] { (false), Settings.settings.cversion, Settings.settings.cversion, serv };
                 }
             }
 
@@ -70,7 +72,8 @@ namespace Scammer_Bingo_Reborn
             {
                 if (serv != 0)
                 {
-                    return new object[] { (false), Settings.settings.cversion, Settings.settings.cversion };
+                    MessageBox.Show("The update servers are unavailable at this time. No updating is not available.", "Updates", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return new object[] { (false), Settings.settings.cversion, Settings.settings.cversion, serv };
                 } else
                 {
                     return updateAvail(1);
@@ -80,12 +83,20 @@ namespace Scammer_Bingo_Reborn
             return new object[]{ (ver != Settings.settings.cversion), ver, Settings.settings.cversion, server, serv };
         }
 
+        public static string RemoveWhitespace(string input)
+        {
+            return new string(input.ToCharArray()
+                .Where(c => !Char.IsWhiteSpace(c))
+                .ToArray());
+        }
+
         public static bool checkForUpdates(Form1 m)
         {
             object[] response = UpdateBackend.updateAvail(0);
             bool av = (bool)response[0];
             string latest = (string)response[1];
             string current = (string)response[2];
+            MessageBox.Show(latest + " " + current + " " + ((int)response[3]));
             if (av)
             {
                 DialogResult res = MessageBox.Show(null, "An update is available!\nInstalled version: " + current + "\nLatest version: " + latest + "\n\nWould you like to install this update now?", "Update available ("+((string)response[3])+" server)", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
