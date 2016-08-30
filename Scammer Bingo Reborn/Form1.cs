@@ -49,8 +49,8 @@ namespace Scammer_Bingo_Reborn
             Control[] arr = new Control[this.Controls.Count];
             this.Controls.CopyTo(arr, 0);
             paintControls(arr, fore, back);
-            //if(Settings.settings.cfuos)
-            // UpdateBackend.checkForUpdates(this);
+            if(Settings.settings.cfuos)
+                UpdateBackend.checkForUpdates(this);
         }
 
         public static void paintControls(Control[] arr, String fore, String back)
@@ -271,9 +271,9 @@ namespace Scammer_Bingo_Reborn
             System.Diagnostics.Process.Start("https://www.youtube.com/user/LewissTech");
         }
 
-        private void checkForUpdatesToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void checkForUpdatesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            bool res = UpdateBackend.checkForUpdates(this);
+            bool res = await UpdateBackend.checkForUpdates(this);
             if(!res)
             {
                 MessageBox.Show(null, "You're already on the latest update!", "No update available", MessageBoxButtons.OK, MessageBoxIcon.Information);
