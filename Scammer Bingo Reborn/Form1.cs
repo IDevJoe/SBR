@@ -25,7 +25,7 @@ namespace Scammer_Bingo_Reborn
         {
             InitializeComponent();
             defaultForm = this;
-            Settings.settings.cversion = "1.4.0.2";
+            Settings.settings.cversion = "1.4.0.3";
             Settings.SaveConfig();
             if (Directory.Exists("update")) Directory.Delete("update", true);
         }

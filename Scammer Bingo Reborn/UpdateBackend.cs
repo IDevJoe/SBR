@@ -25,7 +25,7 @@ namespace Scammer_Bingo_Reborn
                 server = "Primary";
                 try
                 {
-                    HttpWebRequest r = WebRequest.CreateHttp("https://www.hexxiumcreations.com/community/ver.txt");
+                    HttpWebRequest r = (HttpWebRequest)WebRequest.Create("https://hexxiumcreations.com/community/ver.txt");
                     r.UserAgent = "Scammer Bingo Auto-Update";
                     using (WebResponse resp = r.GetResponse())
                     {
@@ -120,7 +120,7 @@ namespace Scammer_Bingo_Reborn
             {
                 try
                 {
-                    System.Diagnostics.Process.Start("https://www.hexxiumcreations.com/community/latestVersion.zip");
+                    System.Diagnostics.Process.Start("https://hexxiumcreations.com/community/latestVersion.zip");
                 } catch(Exception e)
                 {
                     Console.WriteLine(e.StackTrace);
