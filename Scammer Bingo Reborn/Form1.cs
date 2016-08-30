@@ -50,7 +50,7 @@ namespace Scammer_Bingo_Reborn
             this.Controls.CopyTo(arr, 0);
             paintControls(arr, fore, back);
             if(Settings.settings.cfuos)
-            UpdateBackend.checkForUpdates(this);
+            // UpdateBackend.checkForUpdates(this);
         }
 
         public static void paintControls(Control[] arr, String fore, String back)

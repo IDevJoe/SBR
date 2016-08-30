@@ -24,7 +24,7 @@ namespace Scammer_Bingo_Reborn
                 server = "Primary";
                 try
                 {
-                    HttpWebRequest r = WebRequest.CreateHttp("http://www.hexxiumcreations.com/community/ver.txt");
+                    HttpWebRequest r = WebRequest.CreateHttp("https://www.hexxiumcreations.com/community/ver.txt");
                     r.UserAgent = "Scammer Bingo Auto-Update";
                     using (WebResponse resp = r.GetResponse())
                     {
@@ -96,7 +96,6 @@ namespace Scammer_Bingo_Reborn
             bool av = (bool)response[0];
             string latest = (string)response[1];
             string current = (string)response[2];
-            MessageBox.Show(latest + " " + current + " " + ((int)response[3]));
             if (av)
             {
                 DialogResult res = MessageBox.Show(null, "An update is available!\nInstalled version: " + current + "\nLatest version: " + latest + "\n\nWould you like to install this update now?", "Update available ("+((string)response[3])+" server)", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
@@ -133,7 +132,7 @@ namespace Scammer_Bingo_Reborn
             {
                 try
                 {
-                    System.Diagnostics.Process.Start("http://www.hexxiumcreations.com/community/latestVersion.zip");
+                    System.Diagnostics.Process.Start("https://www.hexxiumcreations.com/community/latestVersion.zip");
                 } catch(Exception e)
                 {
                     Console.WriteLine(e.StackTrace);

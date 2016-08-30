@@ -110,7 +110,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 13);
             this.label6.TabIndex = 6;
-            this.label6.Text = "1.4.0.1";
+            this.label6.Text = "1.4.0.2";
             // 
             // label7
             // 
@@ -143,6 +143,7 @@
             // 
             // button2
             // 
+            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button2.Location = new System.Drawing.Point(371, 298);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
