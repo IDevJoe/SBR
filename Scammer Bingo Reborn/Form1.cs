@@ -49,7 +49,7 @@ namespace Scammer_Bingo_Reborn
             Control[] arr = new Control[this.Controls.Count];
             this.Controls.CopyTo(arr, 0);
             paintControls(arr, fore, back);
-            if(Settings.settings.cfuos)
+            //if(Settings.settings.cfuos)
             // UpdateBackend.checkForUpdates(this);
         }
 
