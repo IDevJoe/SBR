@@ -61,10 +61,21 @@ namespace Scammer_Bingo_Reborn
                 }
                 catch (Exception)
                 {
+                    MessageBox.Show("The update servers are unavailable at this time. No updating is not available.", "Updates", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return new object[] { (false), Settings.settings.cversion, Settings.settings.cversion };
                 }
             }
 
+            if(!checkContent(ver))
+            {
+                if (serv != 0)
+                {
+                    return new object[] { (false), Settings.settings.cversion, Settings.settings.cversion };
+                } else
+                {
+                    return updateAvail(1);
+                }
+            }
                 
             return new object[]{ (ver != Settings.settings.cversion), ver, Settings.settings.cversion, server, serv };
         }
@@ -84,6 +95,25 @@ namespace Scammer_Bingo_Reborn
                 }
             }
             return av;
+        }
+
+        public static bool checkContent(string l)
+        {
+            bool valid = true;
+            char[] chars = l.ToCharArray();
+            int charl = 0;
+            int charb = 0;
+            if(valid)
+            {
+                valid = Int32.TryParse(l, out charl);
+            }
+
+            if(valid)
+            {
+                valid = Int32.TryParse(l, out charb);
+            }
+
+            return valid;
         }
 
         public static void update(int serv)
