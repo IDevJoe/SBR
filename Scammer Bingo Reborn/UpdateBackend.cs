@@ -9,7 +9,7 @@ using System.IO.Compression;
 using System.Windows.Forms;
 using System.Security.Permissions;
 using System.Diagnostics;
-//using System.Text.RegularExpressions;
+using System.Text.RegularExpressions;
 
 namespace Scammer_Bingo_Reborn
 {
@@ -110,21 +110,8 @@ namespace Scammer_Bingo_Reborn
 
         public static bool checkContent(string l)
         {
-            bool valid = true;
-            char[] chars = l.ToCharArray();
-            int charl = 0;
-            int charb = 0;
-            if(valid)
-            {
-                valid = Int32.TryParse(l, out charl);
-            }
-
-            if(valid)
-            {
-                valid = Int32.TryParse(l, out charb);
-            }
-
-            return valid;
+            string pattern = @"^\d*\.\d*\.\d*\.\d*$";
+            return Regex.IsMatch(l, pattern);
         }
 
         public static void update(int serv)
