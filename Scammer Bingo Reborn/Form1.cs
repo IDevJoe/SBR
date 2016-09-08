@@ -304,5 +304,10 @@ namespace Scammer_Bingo_Reborn
             paintControls(arr, fore, back);
             f.ShowDialog();
         }
+
+        private void scammerNumbersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new NumberDialog().ShowDialog();
+        }
     }
 }

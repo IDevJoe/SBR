@@ -43,11 +43,6 @@
             this.discordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.authLinkGenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.partnersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xeliteXirishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.androidScammerBingoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lewissTechToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.youTubeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonReset = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -58,6 +53,8 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.resourcesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.scammerNumbersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -84,7 +81,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem,
             this.discordToolStripMenuItem,
-            this.partnersToolStripMenuItem});
+            this.resourcesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(793, 24);
@@ -188,46 +185,6 @@
             this.authLinkGenToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.authLinkGenToolStripMenuItem.Text = "Auth Link Gen";
             this.authLinkGenToolStripMenuItem.Click += new System.EventHandler(this.authLinkGenToolStripMenuItem_Click);
-            // 
-            // partnersToolStripMenuItem
-            // 
-            this.partnersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.xeliteXirishToolStripMenuItem,
-            this.lewissTechToolStripMenuItem});
-            this.partnersToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.partnersToolStripMenuItem.Name = "partnersToolStripMenuItem";
-            this.partnersToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
-            this.partnersToolStripMenuItem.Text = "Partners";
-            // 
-            // xeliteXirishToolStripMenuItem
-            // 
-            this.xeliteXirishToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.androidScammerBingoToolStripMenuItem});
-            this.xeliteXirishToolStripMenuItem.Name = "xeliteXirishToolStripMenuItem";
-            this.xeliteXirishToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
-            this.xeliteXirishToolStripMenuItem.Text = "XeliteXirish";
-            // 
-            // androidScammerBingoToolStripMenuItem
-            // 
-            this.androidScammerBingoToolStripMenuItem.Name = "androidScammerBingoToolStripMenuItem";
-            this.androidScammerBingoToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.androidScammerBingoToolStripMenuItem.Text = "Android Scammer Bingo";
-            this.androidScammerBingoToolStripMenuItem.Click += new System.EventHandler(this.androidScammerBingoToolStripMenuItem_Click);
-            // 
-            // lewissTechToolStripMenuItem
-            // 
-            this.lewissTechToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.youTubeToolStripMenuItem});
-            this.lewissTechToolStripMenuItem.Name = "lewissTechToolStripMenuItem";
-            this.lewissTechToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
-            this.lewissTechToolStripMenuItem.Text = "Lewis\'s Tech";
-            // 
-            // youTubeToolStripMenuItem
-            // 
-            this.youTubeToolStripMenuItem.Name = "youTubeToolStripMenuItem";
-            this.youTubeToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
-            this.youTubeToolStripMenuItem.Text = "YouTube";
-            this.youTubeToolStripMenuItem.Click += new System.EventHandler(this.youTubeToolStripMenuItem_Click);
             // 
             // buttonReset
             // 
@@ -346,6 +303,21 @@
             this.linkLabel2.VisitedLinkColor = System.Drawing.Color.Silver;
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
+            // resourcesToolStripMenuItem
+            // 
+            this.resourcesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.scammerNumbersToolStripMenuItem});
+            this.resourcesToolStripMenuItem.Name = "resourcesToolStripMenuItem";
+            this.resourcesToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
+            this.resourcesToolStripMenuItem.Text = "Resources";
+            // 
+            // scammerNumbersToolStripMenuItem
+            // 
+            this.scammerNumbersToolStripMenuItem.Name = "scammerNumbersToolStripMenuItem";
+            this.scammerNumbersToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.scammerNumbersToolStripMenuItem.Text = "Scammer Numbers";
+            this.scammerNumbersToolStripMenuItem.Click += new System.EventHandler(this.scammerNumbersToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -397,11 +369,6 @@
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem partnersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem xeliteXirishToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem androidScammerBingoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem lewissTechToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem youTubeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem discordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manageToolStripMenuItem;
         public System.Windows.Forms.GroupBox groupBox_BingoBoard;
@@ -411,6 +378,8 @@
         private System.Windows.Forms.ToolStripMenuItem reportAnIssueToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem checkForUpdatesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem resourcesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem scammerNumbersToolStripMenuItem;
     }
 }
 
