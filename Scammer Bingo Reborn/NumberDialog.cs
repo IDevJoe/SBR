@@ -63,24 +63,13 @@ namespace Scammer_Bingo_Reborn
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if(checkBox1.Checked)
-            {
-                textBox1.Enabled = true;
-            } else
-            {
-                textBox1.Text = "";
-                textBox1.Enabled = false;
-            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             bool good1 = false;
-            if(checkBox1.Checked && textBox1.MaskCompleted)
-            {
-                good1 = true;
-            }
-            else if (!checkBox1.Checked)
+            if(textBox1.MaskCompleted)
             {
                 good1 = true;
             }
@@ -88,10 +77,7 @@ namespace Scammer_Bingo_Reborn
 
                 string toSend = "?req=add&data=%2B"+textBox2.Text.Trim().Substring(1);
 
-                if (checkBox1.Checked)
-                {
-                    toSend += "&specifiedname=" +textBox1.Text.Trim();
-                }
+                toSend += "&specifiedname=" +textBox1.Text.Trim();
 
                 WebRequest r = WebRequest.Create("https://sbr.devjoe.me/api/numbers.php" + toSend);
                 string JSON = "{}";
@@ -116,11 +102,10 @@ namespace Scammer_Bingo_Reborn
                 MessageBox.Show(this, "Success! Here's the summary of what was sent:\n\nIP: " + ANE.summary.ip + "\nNumber: +" + ANE.summary.country + " " + ANE.summary.number + "\nName: " + ANE.summary.name, "Sent", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 textBox1.ResetText();
                 textBox2.ResetText();
-                checkBox1.Checked = false;
 
             }  else
             {
-                MessageBox.Show(this, "Please fill in all the fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(this, "Please fill in all the fields correctly.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -125,6 +125,12 @@
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </Compile>
     <Compile Include="ADDNumberEntries.cs" />
+    <Compile Include="APIKeyEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APIKeyEntry.Designer.cs">
+      <DependentUpon>APIKeyEntry.cs</DependentUpon>
+    </Compile>
     <Compile Include="BotBackend.cs" />
     <Compile Include="ButtonTextInput.cs">
       <SubType>Form</SubType>
