@@ -205,7 +205,7 @@ namespace Scammer_Bingo_Reborn
             public int sizeX = 5, sizeY = 4;
             public float whitespaceX = 0.1f, whitespaceY = 0.1f;
             public int[] scoreHistory; //May be implemented in the future
-            public string cversion = "1.4.0.3";
+            public string cversion = "1.4.1.0";
             public bool cfuos = true;
             public string discord_token = "";
             public bool discord_acceptfr = false;
