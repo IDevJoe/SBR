@@ -90,8 +90,8 @@
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox1.Size = new System.Drawing.Size(508, 93);
             this.textBox1.TabIndex = 4;
-            this.textBox1.Text = "** MAIN CONTRIBUTORS **\r\nDevJoe - Project Lead\r\nNitprudo - Project Contributor\r\nI" +
-    "mDema - Project Contributor\r\n\r\n** OUTSIDE CONTRIBUTORS **\r\n\r\nTsubuzaki - Project" +
+            this.textBox1.Text = "** MAIN CONTRIBUTORS **\r\nDevJoe - Project Lead\r\nImDema - Project Contributor\r\n\r\n*" +
+    "* OUTSIDE CONTRIBUTORS **\r\n\r\nNitprudo - Project Contributor\r\nTsubuzaki - Project" +
     " Contributor";
             // 
             // label5
@@ -110,7 +110,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 13);
             this.label6.TabIndex = 6;
-            this.label6.Text = "1.4.1.0";
+            this.label6.Text = "1.4.1.1";
             // 
             // label7
             // 

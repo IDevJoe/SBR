@@ -25,7 +25,7 @@ namespace Scammer_Bingo_Reborn
         {
             InitializeComponent();
             defaultForm = this;
-            Settings.settings.cversion = "1.4.1.0";
+            Settings.settings.cversion = "1.4.1.1";
             Settings.SaveConfig();
             if (Directory.Exists("update")) Directory.Delete("update", true);
         }
@@ -284,7 +284,7 @@ namespace Scammer_Bingo_Reborn
         {
             if (string.IsNullOrWhiteSpace(Settings.settings.discord_token))
             {
-                MessageBox.Show(null, "It appears you don't have a token setup yet, so let me guide you through how to use this.\n\nTo start off, you need to generate a bot token. This can be done by going to [discordapp.com], hovering over the More option, then clicking Developers. Now on the left side, you should see My Applications, click that, and create a new application. Name it, then click Create Application near the bottom. A new page should come up, and you should click \"Create Bot User\". A token option should appear, so you should click reveal, and paste it into the form.\n\nTo add the bot to the server, use the Auth link generator found on [Discord -> Auth Link Gen]", "Discord Integration", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(null, "It appears you don't have a token setup yet, so let me guide you through how to use this.\n\nTo start off, you need to generate a bot token. This can be done by going to [discordapp.com], hovering over the More option, then clicking Developers. Now on the left side, you should see My Applications, click that, and create a new application. Name it, then click Create Application near the bottom. A new page should come up, and you should click \"Create Bot User\". A token option should appear, so you should click reveal, and paste it into the form.\n\nTo add the bot to the server, use the Auth link generator found on [Discord -> Auth Link Gen]\n\nThe prefix for this bot is >", "Discord Integration", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             using(ManageDiscordSettings s = new ManageDiscordSettings()) s.ShowDialog();
         }

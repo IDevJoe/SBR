@@ -274,7 +274,7 @@ namespace Scammer_Bingo_Reborn
         public void reconnect()
         {
             Console.WriteLine("Attempting connection with token " + token);
-            c.Connect(token);
+            c.Connect(token, TokenType.Bot);
             connected = true;
         }
     }
