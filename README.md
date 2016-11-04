@@ -1,5 +1,4 @@
 # Scammer Bingo Reborn
 
-[![Build Status](https://travis-ci.com/JoeTheHuman/SBR.svg?token=cfqbWyqN6vrW3Qq67WNp&branch=master)](https://travis-ci.com/JoeTheHuman/SBR)
 
-
+# THIS IS THE SOURCE CODE REPOSITORY. VISIT THE OTHER SBR REPO FOR RELEASES
