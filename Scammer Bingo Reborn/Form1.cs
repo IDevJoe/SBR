@@ -313,5 +313,15 @@ namespace Scammer_Bingo_Reborn
         {
             new NumberDialog().ShowDialog();
         }
+
+        private void titlebar_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

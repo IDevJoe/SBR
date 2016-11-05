@@ -56,8 +56,8 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.titlebar = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.titlebar_Close = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -179,14 +179,14 @@
             // manageToolStripMenuItem
             // 
             this.manageToolStripMenuItem.Name = "manageToolStripMenuItem";
-            this.manageToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.manageToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.manageToolStripMenuItem.Text = "Manage";
             this.manageToolStripMenuItem.Click += new System.EventHandler(this.manageToolStripMenuItem_Click);
             // 
             // authLinkGenToolStripMenuItem
             // 
             this.authLinkGenToolStripMenuItem.Name = "authLinkGenToolStripMenuItem";
-            this.authLinkGenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.authLinkGenToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.authLinkGenToolStripMenuItem.Text = "Auth Link Gen";
             this.authLinkGenToolStripMenuItem.Click += new System.EventHandler(this.authLinkGenToolStripMenuItem_Click);
             // 
@@ -327,24 +327,12 @@
             // 
             this.titlebar.BackColor = System.Drawing.Color.Black;
             this.titlebar.Controls.Add(this.button2);
-            this.titlebar.Controls.Add(this.button1);
+            this.titlebar.Controls.Add(this.titlebar_Close);
             this.titlebar.ForeColor = System.Drawing.Color.Black;
             this.titlebar.Location = new System.Drawing.Point(0, 27);
             this.titlebar.Name = "titlebar";
             this.titlebar.Size = new System.Drawing.Size(793, 29);
             this.titlebar.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Maroon;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(759, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(22, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "X";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -357,6 +345,20 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "-";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // titlebar_Close
+            // 
+            this.titlebar_Close.BackColor = System.Drawing.Color.Maroon;
+            this.titlebar_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.titlebar_Close.ForeColor = System.Drawing.Color.White;
+            this.titlebar_Close.Location = new System.Drawing.Point(759, 3);
+            this.titlebar_Close.Name = "titlebar_Close";
+            this.titlebar_Close.Size = new System.Drawing.Size(22, 23);
+            this.titlebar_Close.TabIndex = 0;
+            this.titlebar_Close.Text = "X";
+            this.titlebar_Close.UseVisualStyleBackColor = false;
+            this.titlebar_Close.Click += new System.EventHandler(this.titlebar_Close_Click);
             // 
             // Form1
             // 
@@ -424,7 +426,7 @@
         private System.Windows.Forms.ToolStripMenuItem scammerNumbersToolStripMenuItem;
         public System.Windows.Forms.Panel titlebar;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button titlebar_Close;
     }
 }
 
