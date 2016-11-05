@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Runtime.InteropServices;
 
 namespace Scammer_Bingo_Reborn
 {
@@ -17,6 +18,10 @@ namespace Scammer_Bingo_Reborn
         private static int score = 0;
         public static Form1 defaultForm = null;
         Button[,] btns;
+            //Moving Variables
+            private bool _dragging = false;
+            private Point _offset;
+            private Point _start_point = new Point(0, 0);
 
         //Offset from the top of the GroupBox (needed or the first button will go on top of the GroupBox's text)
         private const int offsetY = 10;
@@ -322,6 +327,23 @@ namespace Scammer_Bingo_Reborn
         private void button2_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+
+        [DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
+
+        private void titlebar_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
         }
     }
 }
