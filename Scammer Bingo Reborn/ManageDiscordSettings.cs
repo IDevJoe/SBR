@@ -48,8 +48,15 @@ namespace Scammer_Bingo_Reborn
             checkBox2.Checked = Settings.settings.discord_pmonly;
             if(backend != null)
             {
+                backend.mds = this;
                 checkBox3.Checked = backend.connected;
+                if (backend.connected)
+                {
+                    label5.Text = "Online";
+                    label7.Text = backend.servers + "";
+                }
             }
+            
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
@@ -64,7 +71,7 @@ namespace Scammer_Bingo_Reborn
             {
                 if (backend == null)
                 {
-                    backend = new BotBackend(new Discord.DiscordClient(), label2.Text);
+                    backend = new BotBackend(new Discord.DiscordClient(), label2.Text, this);
                     backend.reconnect();
                 } else
                 {
