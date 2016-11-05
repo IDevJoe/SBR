@@ -49,7 +49,10 @@ namespace Scammer_Bingo_Reborn
             Control[] arr = new Control[this.Controls.Count];
             this.Controls.CopyTo(arr, 0);
             paintControls(arr, fore, back);
-            if(Settings.settings.cfuos)
+            this.titlebar.BackColor = ColorTranslator.FromHtml(fore);
+            this.titlebar.ForeColor = ColorTranslator.FromHtml(back);
+
+            if (Settings.settings.cfuos)
                 UpdateBackend.checkForUpdates(this);
         }
 
@@ -63,6 +66,7 @@ namespace Scammer_Bingo_Reborn
                     {
                         arr[i].ForeColor = ColorTranslator.FromHtml(fore);
                         arr[i].BackColor = ColorTranslator.FromHtml(back);
+                        
                         Control[] cls = new Control[arr[i].Controls.Count];
                         arr[i].Controls.CopyTo(cls, 0);
                         paintControls(cls, fore, back);

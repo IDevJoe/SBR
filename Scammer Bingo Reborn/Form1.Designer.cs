@@ -43,6 +43,8 @@
             this.discordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.authLinkGenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.resourcesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.scammerNumbersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonReset = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -53,14 +55,16 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.resourcesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.scammerNumbersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.titlebar = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.titlebar.SuspendLayout();
             this.SuspendLayout();
             // 
             // label3
@@ -175,25 +179,41 @@
             // manageToolStripMenuItem
             // 
             this.manageToolStripMenuItem.Name = "manageToolStripMenuItem";
-            this.manageToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.manageToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.manageToolStripMenuItem.Text = "Manage";
             this.manageToolStripMenuItem.Click += new System.EventHandler(this.manageToolStripMenuItem_Click);
             // 
             // authLinkGenToolStripMenuItem
             // 
             this.authLinkGenToolStripMenuItem.Name = "authLinkGenToolStripMenuItem";
-            this.authLinkGenToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.authLinkGenToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.authLinkGenToolStripMenuItem.Text = "Auth Link Gen";
             this.authLinkGenToolStripMenuItem.Click += new System.EventHandler(this.authLinkGenToolStripMenuItem_Click);
             // 
+            // resourcesToolStripMenuItem
+            // 
+            this.resourcesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.scammerNumbersToolStripMenuItem});
+            this.resourcesToolStripMenuItem.Name = "resourcesToolStripMenuItem";
+            this.resourcesToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
+            this.resourcesToolStripMenuItem.Text = "Resources";
+            // 
+            // scammerNumbersToolStripMenuItem
+            // 
+            this.scammerNumbersToolStripMenuItem.Name = "scammerNumbersToolStripMenuItem";
+            this.scammerNumbersToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.scammerNumbersToolStripMenuItem.Text = "Scammer Numbers";
+            this.scammerNumbersToolStripMenuItem.Click += new System.EventHandler(this.scammerNumbersToolStripMenuItem_Click);
+            // 
             // buttonReset
             // 
+            this.buttonReset.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.buttonReset.Location = new System.Drawing.Point(42, 19);
             this.buttonReset.Name = "buttonReset";
             this.buttonReset.Size = new System.Drawing.Size(75, 23);
             this.buttonReset.TabIndex = 17;
             this.buttonReset.Text = "Reset";
-            this.buttonReset.UseVisualStyleBackColor = true;
+            this.buttonReset.UseVisualStyleBackColor = false;
             this.buttonReset.Click += new System.EventHandler(this.ButtonReset_Click);
             // 
             // label5
@@ -211,7 +231,7 @@
             // 
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Location = new System.Drawing.Point(615, 35);
+            this.groupBox1.Location = new System.Drawing.Point(615, 59);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(163, 64);
             this.groupBox1.TabIndex = 19;
@@ -222,7 +242,7 @@
             // 
             this.groupBox_BingoBoard.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.groupBox_BingoBoard.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox_BingoBoard.Location = new System.Drawing.Point(12, 35);
+            this.groupBox_BingoBoard.Location = new System.Drawing.Point(12, 59);
             this.groupBox_BingoBoard.Name = "groupBox_BingoBoard";
             this.groupBox_BingoBoard.Size = new System.Drawing.Size(597, 366);
             this.groupBox_BingoBoard.TabIndex = 20;
@@ -233,7 +253,7 @@
             // 
             this.groupBox3.Controls.Add(this.buttonReset);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox3.Location = new System.Drawing.Point(616, 105);
+            this.groupBox3.Location = new System.Drawing.Point(616, 129);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(162, 59);
             this.groupBox3.TabIndex = 21;
@@ -244,7 +264,7 @@
             // 
             this.groupBox4.Controls.Add(this.label5);
             this.groupBox4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox4.Location = new System.Drawing.Point(616, 170);
+            this.groupBox4.Location = new System.Drawing.Point(616, 194);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(162, 100);
             this.groupBox4.TabIndex = 22;
@@ -255,7 +275,7 @@
             // 
             this.groupBox5.Controls.Add(this.linkLabel1);
             this.groupBox5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox5.Location = new System.Drawing.Point(615, 276);
+            this.groupBox5.Location = new System.Drawing.Point(615, 300);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(163, 50);
             this.groupBox5.TabIndex = 23;
@@ -282,7 +302,7 @@
             this.groupBox6.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.groupBox6.Controls.Add(this.linkLabel2);
             this.groupBox6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox6.Location = new System.Drawing.Point(616, 335);
+            this.groupBox6.Location = new System.Drawing.Point(616, 359);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(163, 66);
             this.groupBox6.TabIndex = 24;
@@ -303,27 +323,48 @@
             this.linkLabel2.VisitedLinkColor = System.Drawing.Color.Silver;
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
-            // resourcesToolStripMenuItem
+            // titlebar
             // 
-            this.resourcesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.scammerNumbersToolStripMenuItem});
-            this.resourcesToolStripMenuItem.Name = "resourcesToolStripMenuItem";
-            this.resourcesToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
-            this.resourcesToolStripMenuItem.Text = "Resources";
+            this.titlebar.BackColor = System.Drawing.Color.Black;
+            this.titlebar.Controls.Add(this.button2);
+            this.titlebar.Controls.Add(this.button1);
+            this.titlebar.ForeColor = System.Drawing.Color.Black;
+            this.titlebar.Location = new System.Drawing.Point(0, 27);
+            this.titlebar.Name = "titlebar";
+            this.titlebar.Size = new System.Drawing.Size(793, 29);
+            this.titlebar.TabIndex = 0;
             // 
-            // scammerNumbersToolStripMenuItem
+            // button1
             // 
-            this.scammerNumbersToolStripMenuItem.Name = "scammerNumbersToolStripMenuItem";
-            this.scammerNumbersToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
-            this.scammerNumbersToolStripMenuItem.Text = "Scammer Numbers";
-            this.scammerNumbersToolStripMenuItem.Click += new System.EventHandler(this.scammerNumbersToolStripMenuItem_Click);
+            this.button1.BackColor = System.Drawing.Color.Maroon;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(759, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(22, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Black;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(731, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(22, 23);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "-";
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(793, 412);
+            this.ClientSize = new System.Drawing.Size(793, 437);
+            this.Controls.Add(this.titlebar);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox1);
@@ -331,7 +372,7 @@
             this.Controls.Add(this.groupBox_BingoBoard);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox4);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "Form1";
@@ -347,6 +388,7 @@
             this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.titlebar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -380,6 +422,9 @@
         private System.Windows.Forms.ToolStripMenuItem checkForUpdatesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem resourcesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem scammerNumbersToolStripMenuItem;
+        public System.Windows.Forms.Panel titlebar;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }
 
