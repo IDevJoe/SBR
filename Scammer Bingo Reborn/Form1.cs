@@ -54,8 +54,6 @@ namespace Scammer_Bingo_Reborn
             Control[] arr = new Control[this.Controls.Count];
             this.Controls.CopyTo(arr, 0);
             paintControls(arr, fore, back);
-            this.titlebar.BackColor = ColorTranslator.FromHtml(fore);
-            this.titlebar.ForeColor = ColorTranslator.FromHtml(back);
 
             if (Settings.settings.cfuos)
                 UpdateBackend.checkForUpdates(this);
