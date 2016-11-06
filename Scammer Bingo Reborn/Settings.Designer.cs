@@ -81,6 +81,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.Location = new System.Drawing.Point(339, 19);
             this.button1.Name = "button1";
@@ -93,10 +94,11 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
+            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBox1.ForeColor = System.Drawing.SystemColors.Control;
             this.checkBox1.Location = new System.Drawing.Point(6, 25);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(200, 17);
+            this.checkBox1.Size = new System.Drawing.Size(197, 17);
             this.checkBox1.TabIndex = 0;
             this.checkBox1.Text = "Enable messages (10/20 and 20/20)";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -117,10 +119,11 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
+            this.checkBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBox2.ForeColor = System.Drawing.SystemColors.Control;
             this.checkBox2.Location = new System.Drawing.Point(6, 20);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(285, 17);
+            this.checkBox2.Size = new System.Drawing.Size(282, 17);
             this.checkBox2.TabIndex = 0;
             this.checkBox2.Text = "Enable Auto Reset (Will reset when the score is 20/20)";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -129,6 +132,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button2.Location = new System.Drawing.Point(415, 646);
             this.button2.Name = "button2";
@@ -142,6 +146,7 @@
             // 
             this.button3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.button3.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button3.Location = new System.Drawing.Point(334, 646);
             this.button3.Name = "button3";
@@ -154,6 +159,7 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button4.Location = new System.Drawing.Point(253, 646);
             this.button4.Name = "button4";
@@ -191,6 +197,7 @@
             // comboBox2
             // 
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "Dark Green",
@@ -223,6 +230,7 @@
             // comboBox1
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Dark Green",
@@ -273,6 +281,7 @@
             // comboBoxDifficulty
             // 
             this.comboBoxDifficulty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDifficulty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxDifficulty.FormattingEnabled = true;
             this.comboBoxDifficulty.Items.AddRange(new object[] {
             "Easy (4x3)",
@@ -298,6 +307,7 @@
             // 
             this.button_Edit.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.button_Edit.Enabled = false;
+            this.button_Edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Edit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button_Edit.Location = new System.Drawing.Point(339, 287);
             this.button_Edit.Name = "button_Edit";
@@ -311,6 +321,7 @@
             // 
             this.button_Remove.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.button_Remove.Enabled = false;
+            this.button_Remove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Remove.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button_Remove.Location = new System.Drawing.Point(94, 287);
             this.button_Remove.Name = "button_Remove";
@@ -323,6 +334,7 @@
             // button_Add
             // 
             this.button_Add.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Add.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button_Add.Location = new System.Drawing.Point(10, 287);
             this.button_Add.Name = "button_Add";
@@ -364,9 +376,10 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
+            this.checkBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBox3.Location = new System.Drawing.Point(9, 19);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(163, 17);
+            this.checkBox3.Size = new System.Drawing.Size(160, 17);
             this.checkBox3.TabIndex = 0;
             this.checkBox3.Text = "Check for updates on launch";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -375,6 +388,7 @@
             // button_Default
             // 
             this.button_Default.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button_Default.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Default.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button_Default.Location = new System.Drawing.Point(12, 646);
             this.button_Default.Name = "button_Default";

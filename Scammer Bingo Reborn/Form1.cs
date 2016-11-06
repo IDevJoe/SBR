@@ -128,6 +128,7 @@ namespace Scammer_Bingo_Reborn
                     btns[i, j].Name = "btn" + i + "." + j;
                     btns[i, j].Text = buttonText[i, j];
                     btns[i, j].Click += BingoButton_Click;
+                    btns[i, j].FlatStyle = FlatStyle.Flat;
                 }
             }
             ArrangeButtons(btns, container);
@@ -194,7 +195,7 @@ namespace Scammer_Bingo_Reborn
             }
             score++;
             string newScore = score + "/" + btns.Length;
-            int newPercentage = score / btns.Length * 100;
+            int newPercentage = score / btns.Length * 100; //Work in progress, not working. I dont know whats wrong. - Nit
             label3.Text = newScore;
             label2.Text = newPercentage.ToString() + "%";
             ((Button)sender).Enabled = false;

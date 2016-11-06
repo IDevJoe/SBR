@@ -43,10 +43,15 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.titlebar = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.titlebar_Close = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.titlebar.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -54,7 +59,7 @@
             this.pictureBox1.ErrorImage = null;
             this.pictureBox1.Image = global::Scammer_Bingo_Reborn.Properties.Resources.DiscordLogo;
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(199, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(199, 55);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(210, 76);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -63,6 +68,7 @@
             // 
             // button1
             // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(504, 19);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
@@ -76,7 +82,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 111);
+            this.groupBox1.Location = new System.Drawing.Point(12, 154);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(585, 56);
             this.groupBox1.TabIndex = 2;
@@ -104,7 +110,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(241, 349);
+            this.label3.Location = new System.Drawing.Point(241, 392);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(356, 13);
             this.label3.TabIndex = 3;
@@ -114,7 +120,7 @@
             // 
             this.groupBox2.Controls.Add(this.checkBox2);
             this.groupBox2.Controls.Add(this.checkBox1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 174);
+            this.groupBox2.Location = new System.Drawing.Point(12, 217);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(585, 71);
             this.groupBox2.TabIndex = 4;
@@ -124,9 +130,10 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
+            this.checkBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBox2.Location = new System.Drawing.Point(9, 43);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(127, 17);
+            this.checkBox2.Size = new System.Drawing.Size(124, 17);
             this.checkBox2.TabIndex = 1;
             this.checkBox2.Text = "Restrict bingo to PMs";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -135,9 +142,10 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
+            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBox1.Location = new System.Drawing.Point(9, 20);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(273, 17);
+            this.checkBox1.Size = new System.Drawing.Size(270, 17);
             this.checkBox1.TabIndex = 0;
             this.checkBox1.Text = "Accept all friend requests (Useful for Discord groups)";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -150,7 +158,7 @@
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Location = new System.Drawing.Point(12, 252);
+            this.groupBox3.Location = new System.Drawing.Point(12, 295);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(585, 70);
             this.groupBox3.TabIndex = 5;
@@ -160,9 +168,10 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
+            this.checkBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBox3.Location = new System.Drawing.Point(504, 20);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(66, 17);
+            this.checkBox3.Size = new System.Drawing.Size(63, 17);
             this.checkBox3.TabIndex = 4;
             this.checkBox3.Text = "Connect";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -204,18 +213,71 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Status:";
             // 
+            // titlebar
+            // 
+            this.titlebar.BackColor = System.Drawing.Color.Black;
+            this.titlebar.Controls.Add(this.label8);
+            this.titlebar.Controls.Add(this.button5);
+            this.titlebar.Controls.Add(this.titlebar_Close);
+            this.titlebar.ForeColor = System.Drawing.Color.Black;
+            this.titlebar.Location = new System.Drawing.Point(0, 0);
+            this.titlebar.Name = "titlebar";
+            this.titlebar.Size = new System.Drawing.Size(612, 29);
+            this.titlebar.TabIndex = 10;
+            this.titlebar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.titlebar_MouseDown);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(8, 2);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(140, 25);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Discord Settings";
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Black;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(547, 3);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(22, 23);
+            this.button5.TabIndex = 1;
+            this.button5.Text = "-";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // titlebar_Close
+            // 
+            this.titlebar_Close.BackColor = System.Drawing.Color.Maroon;
+            this.titlebar_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.titlebar_Close.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titlebar_Close.ForeColor = System.Drawing.Color.White;
+            this.titlebar_Close.Location = new System.Drawing.Point(575, 3);
+            this.titlebar_Close.Name = "titlebar_Close";
+            this.titlebar_Close.Size = new System.Drawing.Size(22, 23);
+            this.titlebar_Close.TabIndex = 0;
+            this.titlebar_Close.Text = "X";
+            this.titlebar_Close.UseVisualStyleBackColor = false;
+            this.titlebar_Close.Click += new System.EventHandler(this.titlebar_Close_Click);
+            // 
             // ManageDiscordSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(609, 371);
+            this.ClientSize = new System.Drawing.Size(609, 414);
+            this.Controls.Add(this.titlebar);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ManageDiscordSettings";
@@ -228,6 +290,8 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.titlebar.ResumeLayout(false);
+            this.titlebar.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,5 +314,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox checkBox3;
         public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Panel titlebar;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button titlebar_Close;
     }
 }
