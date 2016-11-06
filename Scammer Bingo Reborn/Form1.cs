@@ -16,6 +16,7 @@ namespace Scammer_Bingo_Reborn
     {
         //Global Variables
         private static int score = 0;
+        private static int percentage = 0;
         public static Form1 defaultForm = null;
         Button[,] btns;
             //Moving Variables
@@ -193,7 +194,9 @@ namespace Scammer_Bingo_Reborn
             }
             score++;
             string newScore = score + "/" + btns.Length;
+            int newPercentage = score / btns.Length * 100;
             label3.Text = newScore;
+            label2.Text = newPercentage.ToString() + "%";
             ((Button)sender).Enabled = false;
             buttonReset.Focus();
             if(score == btns.Length/2 && Settings.settings.messages && !l)
