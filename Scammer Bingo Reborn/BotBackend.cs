@@ -18,15 +18,40 @@ namespace Scammer_Bingo_Reborn
         public DiscordClient c;
         public string token;
         public bool connected = false;
+        public int servers = 0;
+        public ManageDiscordSettings mds = null;
         delegate void setDisabledCallback(Control l);
         delegate void resetBoardCallback();
+        delegate void setTextCallback(Label b, string text);
 
-        public BotBackend(DiscordClient _c, string token)
+        public BotBackend(DiscordClient _c, string token, ManageDiscordSettings s)
         {
             c = _c;
             this.token = token;
             c.MessageReceived += C_MessageReceived;
+            c.ServerAvailable += C_ServerAvailable;
+            c.JoinedServer += C_JoinedServer;
+            c.LeftServer += C_LeftServer;
             last = this;
+            this.mds = s;
+        }
+
+        private void C_LeftServer(object sender, ServerEventArgs e)
+        {
+            servers--;
+            setText(mds.label7, "" + servers);
+        }
+
+        private void C_JoinedServer(object sender, ServerEventArgs e)
+        {
+            servers++;
+            setText(mds.label7, "" + servers);
+        }
+
+        private void C_ServerAvailable(object sender, ServerEventArgs e)
+        {
+            servers++;
+            setText(mds.label7, ""+servers);
         }
 
         private void C_MessageReceived(object sender, MessageEventArgs e)
@@ -124,6 +149,19 @@ namespace Scammer_Bingo_Reborn
             } else
             {
                 Form1.defaultForm.buttonClick(l, true);
+            }
+        }
+
+        private void setText(Label b, string text)
+        {
+            if (Form1.defaultForm.InvokeRequired)
+            {
+                setTextCallback d = new setTextCallback(setText);
+                Form1.defaultForm.Invoke(d, new object[] { b, text });
+            }
+            else
+            {
+                b.Text = text;
             }
         }
 
@@ -269,6 +307,7 @@ namespace Scammer_Bingo_Reborn
         {
             c.Disconnect();
             connected = false;
+            setText(mds.label5, "Offline");
         }
 
         public void reconnect()
@@ -276,6 +315,7 @@ namespace Scammer_Bingo_Reborn
             Console.WriteLine("Attempting connection with token " + token);
             c.Connect(token, TokenType.Bot);
             connected = true;
+            setText(mds.label5, "Online");
         }
     }
 }
