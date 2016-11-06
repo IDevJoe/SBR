@@ -248,7 +248,7 @@ namespace Scammer_Bingo_Reborn
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/JoeTheHuman/Scammer-Bingo-Reborn/wiki/How-to-contribute");
+            System.Diagnostics.Process.Start("https://github.com/TCDG/SBR/wiki/How-to-contribute");
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
