@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Runtime.InteropServices;
 
 namespace Scammer_Bingo_Reborn
 {
@@ -15,8 +16,13 @@ namespace Scammer_Bingo_Reborn
     {
         //Global Variables
         private static int score = 0;
+        private static int percentage = 0;
         public static Form1 defaultForm = null;
         Button[,] btns;
+            //Moving Variables
+            private bool _dragging = false;
+            private Point _offset;
+            private Point _start_point = new Point(0, 0);
 
         //Offset from the top of the GroupBox (needed or the first button will go on top of the GroupBox's text)
         private const int offsetY = 10;
@@ -49,7 +55,8 @@ namespace Scammer_Bingo_Reborn
             Control[] arr = new Control[this.Controls.Count];
             this.Controls.CopyTo(arr, 0);
             paintControls(arr, fore, back);
-            if(Settings.settings.cfuos)
+
+            if (Settings.settings.cfuos)
                 UpdateBackend.checkForUpdates(this);
         }
 
@@ -63,6 +70,7 @@ namespace Scammer_Bingo_Reborn
                     {
                         arr[i].ForeColor = ColorTranslator.FromHtml(fore);
                         arr[i].BackColor = ColorTranslator.FromHtml(back);
+                        
                         Control[] cls = new Control[arr[i].Controls.Count];
                         arr[i].Controls.CopyTo(cls, 0);
                         paintControls(cls, fore, back);
@@ -186,7 +194,9 @@ namespace Scammer_Bingo_Reborn
             }
             score++;
             string newScore = score + "/" + btns.Length;
+            int newPercentage = score / btns.Length * 100;
             label3.Text = newScore;
+            label2.Text = newPercentage.ToString() + "%";
             ((Button)sender).Enabled = false;
             buttonReset.Focus();
             if(score == btns.Length/2 && Settings.settings.messages && !l)
@@ -308,6 +318,33 @@ namespace Scammer_Bingo_Reborn
         private void scammerNumbersToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new NumberDialog().ShowDialog();
+        }
+
+        private void titlebar_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+
+        [DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
+
+        private void titlebar_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
         }
     }
 }
