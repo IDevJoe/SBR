@@ -1,4 +1,5 @@
 # Scammer Bingo Reborn
 
+Discontinued.
 
-# THIS IS THE SOURCE CODE REPOSITORY. VISIT THE OTHER SBR REPO FOR RELEASES
+George Peppard (inventor02) has full access to use any part of the original Scammer Bingo Reborn code in [this repository](https://github.com/inventor02/scammer-bingo-v2).
